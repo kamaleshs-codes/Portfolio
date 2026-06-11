@@ -33,7 +33,7 @@ export default function Certifications() {
       )
     },
     {
-      title: "Advanced C++ & Java Programming",
+      title: "Advanced C++ & Java Programming (Training)",
       issuer: "Spoken Tutorial Project, IIT Bombay",
       type: "Object Oriented Programming",
       icon: (
