@@ -1,13 +1,13 @@
 import eCommerceProject from "../assets/ecommerce-websites.jpg";
-//import foodeCommerce from "../assets/food-ecommerce.jpg";
-//import webBlog from "../assets/website-blog.jpg";
+import todoList from "../assets/Todolist-project.jpg";
+import youtubeClone from "../assets/Youtubeclone_pro.png";
 
 export default function Project() {
   const projectsList = [
     {
       title: "To-Do List Web Application",
       description: "Engineered a fully responsive task management application with complete CRUD functionality — add, edit, and delete tasks.",
-      //image: webBlog,
+      image: todoList,
       tech: ["HTML5", "CSS3", "JavaScript"],
       bullets: [
         "Implemented real-time dynamic DOM manipulation for instant UI updates without page reload.",
@@ -17,7 +17,7 @@ export default function Project() {
     {
       title: "YouTube Clone",
       description: "Recreated the YouTube homepage UI with pixel-accurate layout replication, demonstrating strong visual attention to detail.",
-      //image: foodeCommerce,
+      image: youtubeClone,
       tech: ["HTML5", "CSS3", "Flexbox", "Grid"],
       bullets: [
         "Leveraged CSS Flexbox and Grid to build a modern, fully responsive multi-column page structure.",
