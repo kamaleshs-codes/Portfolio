@@ -38,7 +38,7 @@ export default function Hero() {
         {/* Social Icons */}
         <div className="flex items-center space-x-5 pt-4">
           <a 
-            href="https://github.com" 
+            href="https://github.com/kamaleshs-codes" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-slate-400 hover:text-accent transition-colors"
@@ -49,7 +49,7 @@ export default function Hero() {
             </svg>
           </a>
           <a 
-            href="https://linkedin.com" 
+            href="https://linkedin.com/in/kamalesh-s2004" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-slate-400 hover:text-accent transition-colors"
