@@ -2,7 +2,7 @@
   "name": "porfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kamaleshs-codes.github.io/Porfolio",
+  "homepage": "https://kamaleshs-codes.github.io/Portfolio",
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@testing-library/dom": "^10.4.1",
@@ -17,6 +17,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -40,6 +42,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.5.0",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5.15",
     "tailwindcss": "^3.4.19"
   }

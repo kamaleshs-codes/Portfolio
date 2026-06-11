@@ -14,7 +14,7 @@ export default function Hero() {
         </div>
 
         <h1 className="font-outfit font-extrabold text-4xl md:text-6xl tracking-tight leading-tight">
-          Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-light to-accent">Kamalesh S</span>
+          Hello!<br/>I am <span className="bg-clip-text bg-gradient-to-r from-primary-light to-accent">Kamalesh S</span>
         </h1>
         
         <h2 className="text-xl md:text-2xl font-bold text-slate-200">
