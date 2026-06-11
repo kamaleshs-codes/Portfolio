@@ -26,15 +26,15 @@ export default function About() {
           </div>
 
           <p className="text-textMuted text-base md:text-lg leading-relaxed font-light">
-            Hello! I'm <strong className="text-textMain font-semibold">Kamalesh S</strong>, a passionate Frontend Web Developer and Computer Science postgraduate with a strong foundation in building responsive, accessible, and performant web applications. 
+            Hello! I'm <strong className="text-textMain font-semibold">Kamalesh S</strong>. I am a motivated Computer Science postgraduate with hands-on experience in Front-End Web Development using HTML5, CSS3, JavaScript (ES6+), Bootstrap, and React.js.
           </p>
           
           <p className="text-textMuted text-base leading-relaxed font-light">
-            I specialize in component-driven UI architectures, React.js state management, DOM manipulation, and building pixel-perfect responsive layouts using Tailwind CSS and Bootstrap. My post-graduate study has equipped me with advanced knowledge of computer science paradigms, programming structures, and databases like MongoDB.
+            I am skilled in building responsive, user-friendly web applications with a strong foundation in UI development and problem-solving. With a deep passion for creating modern web solutions, I enjoy bridging the gap between design and clean code, ensuring that everything I build is optimized, maintainable, and provides a delightful user experience.
           </p>
 
           <p className="text-textMuted text-base leading-relaxed font-light">
-            I enjoy bridging the gap between design and clean code, ensuring that everything I build is optimized, maintainable, and provides a delightful user experience.
+            I am eager to contribute my technical expertise to innovative teams and tackle challenging projects that make a real difference.
           </p>
 
           {/* Quick Highlight Cards */}
@@ -52,7 +52,7 @@ export default function About() {
                 <span className="w-2.5 h-2.5 rounded-full bg-accent mr-2"></span>
                 Tech Focus
               </h3>
-              <p className="text-sm text-textMuted">React.js, ES6+ JavaScript, UI Components, CSS Grid & Flexbox</p>
+              <p className="text-sm text-textMuted">React.js, Tailwind CSS, JavaScript (ES6+), Bootstrap, DOM Manipulation</p>
             </div>
           </div>
         </div>

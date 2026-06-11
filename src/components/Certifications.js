@@ -3,8 +3,8 @@ import React from "react";
 export default function Certifications() {
   const certList = [
     {
-      title: "Full Stack Development (30 Days)",
-      issuer: "NoviTech R&D Private Limited",
+      title: "(30 Days) Full Stack Development",
+      issuer: "NoviTech R&D Private Limited.",
       type: "Full Stack Training",
       icon: (
         <svg className="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -13,7 +13,7 @@ export default function Certifications() {
       )
     },
     {
-      title: "Frontend Web Development Program (15 Days)",
+      title: "(15 Days) Frontend Web Development Program",
       issuer: "Coursevita",
       type: "Web Development Bootcamp",
       icon: (
@@ -23,7 +23,7 @@ export default function Certifications() {
       )
     },
     {
-      title: "HTML, CSS & JavaScript",
+      title: "HTML, CSS, Javascript",
       issuer: "Great Learning Academy",
       type: "Frontend Essentials",
       icon: (
@@ -33,7 +33,7 @@ export default function Certifications() {
       )
     },
     {
-      title: "Advanced C++ & Java Programming (Training)",
+      title: "Advanced C++, Java (Training)",
       issuer: "Spoken Tutorial Project, IIT Bombay",
       type: "Object Oriented Programming",
       icon: (

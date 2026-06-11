@@ -3,17 +3,17 @@ import React from "react";
 export default function Education() {
   const educationList = [
     {
-      degree: "M.Sc. Computer Science",
+      degree: "M.Sc Computer Science",
       institution: "Sri Sankara Arts and Science College",
-      period: "2024 – 2026",
-      cgpa: "CGPA: 8.2",
+      period: "2026",
+      cgpa: "CGPA - 8.2",
       description: "Post-graduate studies specializing in advanced computer science methodologies, algorithms, and software engineering. Focused research on web technologies and user experience."
     },
     {
-      degree: "B.Sc. Computer Science",
+      degree: "B.Sc Computer Science",
       institution: "Sri Sankara Arts and Science College",
-      period: "2021 – 2024",
-      cgpa: "CGPA: 7.3",
+      period: "2024",
+      cgpa: "CGPA - 7.3",
       description: "Undergraduate curriculum building foundational concepts in programming languages, data structures, databases, and general computer science theory."
     }
   ];

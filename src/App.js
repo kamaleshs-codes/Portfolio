@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Project from "./components/Project";
+import Internship from "./components/Internship";
 import Resume from "./components/Resume";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
@@ -19,6 +20,7 @@ function App() {
         <About />
         <Skills />
         <Project />
+        <Internship />
         <Education />
         <Certifications />
         <Resume />

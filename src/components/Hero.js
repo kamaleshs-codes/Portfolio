@@ -18,11 +18,11 @@ export default function Hero() {
         </h1>
         
         <h2 className="text-xl md:text-2xl font-bold text-slate-200">
-          Frontend Web Developer <span className="text-accent">|</span> M.Sc. Computer Science
+          Web Developer <span className="text-accent">|</span> Computer Science Postgraduate
         </h2>
 
         <p className="text-slate-400 max-w-xl text-base md:text-lg leading-relaxed font-light">
-          Passionate about building responsive, accessible, and performant web applications using React.js, JavaScript (ES6+), and modern styling frameworks. Experienced in component-driven UI architecture and DOM manipulation.
+          Motivated Computer Science postgraduate with hands-on experience in Front-End Web Development using HTML5, CSS3, JavaScript (ES6+), Bootstrap, and React.js. Passionate about creating modern, user-friendly web solutions.
         </p>
 
         {/* Call to Actions */}

@@ -1,37 +1,49 @@
 import eCommerceProject from "../assets/ecommerce-websites.jpg";
 import todoList from "../assets/Todolist-project.jpg";
 import youtubeClone from "../assets/Youtubeclone_pro.png";
+import instagramClone from "../assets/instagram-clone.png";
 
 export default function Project() {
   const projectsList = [
     {
       title: "To-Do List Web Application",
-      description: "Engineered a fully responsive task management application with complete CRUD functionality — add, edit, and delete tasks.",
+      description: "Developed a fully responsive task management app with add, edit, and delete functionality.",
       image: todoList,
-      tech: ["HTML5", "CSS3", "JavaScript"],
+      tech: ["HTML", "CSS", "JavaScript"],
       bullets: [
-        "Implemented real-time dynamic DOM manipulation for instant UI updates without page reload.",
-        "Applied mobile-first design principles ensuring seamless cross-device compatibility."
+        "Implemented dynamic DOM manipulation for real-time task updates without page reload.",
+        "Applied mobile-first design principles ensuring cross-device compatibility."
       ]
     },
     {
       title: "YouTube Clone",
-      description: "Recreated the YouTube homepage UI with pixel-accurate layout replication, demonstrating strong visual attention to detail.",
+      description: "Recreated the YouTube homepage interface with pixel-accurate layout replication.",
       image: youtubeClone,
-      tech: ["HTML5", "CSS3", "Flexbox", "Grid"],
+      tech: ["HTML", "CSS"],
       bullets: [
-        "Leveraged CSS Flexbox and Grid to build a modern, fully responsive multi-column page structure.",
-        "Maintained clean semantic HTML markup and consistent cross-browser styling for accessibility."
+        "Applied Flexbox and CSS Grid for a modern, fully responsive page structure.",
+        "Focused on clean semantic HTML and cross-browser styling consistency."
       ]
     },
     {
-      title: "E-Commerce Web Application",
-      description: "Built a multi-page responsive e-commerce platform featuring product listings, interactive UI components, and a mobile-friendly layout.",
+      title: "E-Commerce Website",
+      description: "Built a multi-page responsive e-commerce site featuring product listings and interactive UI.",
       image: eCommerceProject,
-      tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+      tech: ["HTML", "CSS", "JavaScript"],
       bullets: [
-        "Utilized Bootstrap grid system alongside custom CSS to deliver a polished storefront experience.",
-        "Incorporated interactive JavaScript components to enhance the user shopping experience."
+        "Designed mobile-friendly layouts using Bootstrap grid system and custom CSS.",
+        "Incorporated interactive components to enhance the user shopping experience."
+      ]
+    },
+    {
+      title: "Instagram-Clone",
+      description: "Developed a responsive Instagram-inspired social media interface using React.js.",
+      image: instagramClone,
+      tech: ["HTML", "CSS", "Bootstrap", "React.js"],
+      bullets: [
+        "Implemented component-based architecture and reusable UI components.",
+        "Created dynamic post feeds and modern responsive layouts.",
+        "Applied React state management and routing concepts."
       ]
     }
   ];
@@ -49,7 +61,7 @@ export default function Project() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projectsList.map((project, idx) => (
             <div 
               key={idx} 
