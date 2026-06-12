@@ -15,6 +15,8 @@ export default function Project() {
         "Implemented dynamic DOM manipulation for real-time task updates without page reload.",
         "Applied mobile-first design principles ensuring cross-device compatibility.",
       ],
+      githublink: "https://github.com/kamaleshs-codes/To-do-List-/",
+      livelink: "https://kamaleshs-codes.github.io/To-do-List-/",
     },
     {
       title: "YouTube Clone",
@@ -26,6 +28,8 @@ export default function Project() {
         "Applied Flexbox and CSS Grid for a modern, fully responsive page structure.",
         "Focused on clean semantic HTML and cross-browser styling consistency.",
       ],
+      githublink: "",
+      livelink: "",
     },
     {
       title: "E-Commerce Website",
@@ -37,6 +41,8 @@ export default function Project() {
         "Designed mobile-friendly layouts using Bootstrap grid system and custom CSS.",
         "Incorporated interactive components to enhance the user shopping experience.",
       ],
+      githublink: "",
+      livelink: "",
     },
     {
       title: "Instagram-Clone",
@@ -49,6 +55,8 @@ export default function Project() {
         "Created dynamic post feeds and modern responsive layouts.",
         "Applied React state management and routing concepts.",
       ],
+      githublink: "https://github.com/kamaleshs-codes/Instagram-clone/",
+      livelink: "",
     },
   ];
 
@@ -123,7 +131,7 @@ export default function Project() {
                 {/* Action Links */}
                 <div className="flex items-center space-x-4">
                   <a
-                    href="https://github.com/kamaleshs-codes/To-do-List-/"
+                    href={project.githublink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs font-bold text-primary hover:text-blue-700 flex items-center space-x-1"
@@ -138,7 +146,7 @@ export default function Project() {
                   </a>
                   <span className="text-slate-300">|</span>
                   <a
-                    href="https://kamaleshs-codes.github.io/To-do-List-/"
+                    href={project.livelink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs font-bold text-accent hover:text-teal-700 flex items-center space-x-1"
