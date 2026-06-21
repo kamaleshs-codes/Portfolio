@@ -1,0 +1,85 @@
+import { useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
+import { motion, AnimatePresence } from "framer-motion";
+
+export default function Header() {
+  const [toggleMenu, setToggleMenu] = useState(false);
+
+  const navLinks = [
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#project" },
+    { name: "Internships", href: "#internship" },
+    { name: "Education", href: "#education" },
+    { name: "Certifications", href: "#certifications" },
+    { name: "Contact", href: "#contact" },
+  ];
+
+  return (
+    <motion.header
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      className='glass-header px-6 py-4 flex justify-between items-center transition-all duration-300'>
+      <a
+        className='font-outfit font-extrabold text-2xl tracking-tight text-white hover:opacity-90 transition-opacity'
+        href='#home'>
+        Kamalesh<span className='text-accent font-black'>.</span>
+      </a>
+
+      {/* Desktop Navigation */}
+      <nav className='hidden md:block'>
+        <ul className='flex items-center space-x-8 text-sm font-medium tracking-wide text-slate-300'>
+          {navLinks.map((link) => (
+            <li key={link.name}>
+              <a
+                href={link.href}
+                className='hover:text-accent border-b-2 border-transparent hover:border-accent py-1.5 transition-all duration-200'>
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      {/* Mobile Menu Toggle */}
+      <button
+        onClick={() => setToggleMenu(!toggleMenu)}
+        className='block md:hidden text-white hover:text-accent transition-colors focus:outline-none'
+        aria-label='Toggle navigation menu'>
+        {toggleMenu ? (
+          <FiX className='h-6 w-6' />
+        ) : (
+          <FiMenu className='h-6 w-6' />
+        )}
+      </button>
+
+      {/* Mobile Navigation Drawer */}
+      <AnimatePresence>
+        {toggleMenu && (
+          <motion.nav
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.25 }}
+            className='md:hidden fixed top-[69px] left-0 w-full bg-secondary/95 border-b border-slate-800'>
+            <ul
+              onClick={() => setToggleMenu(false)}
+              className='flex flex-col items-center py-4 text-slate-300 font-medium'>
+              {navLinks.map((link) => (
+                <li key={link.name} className='w-full text-center'>
+                  <a
+                    href={link.href}
+                    className='block py-3 hover:bg-slate-800/50 hover:text-accent transition-all duration-200'>
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </motion.nav>
+        )}
+      </AnimatePresence>
+    </motion.header>
+  );
+}

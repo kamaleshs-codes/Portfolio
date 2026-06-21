@@ -7,9 +7,21 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  color: #1E293B;
-  background-color: #FFFFFF;
+  font-family: "Inter", sans-serif;
+  color: var(--text-main, #0f1724);
+  background-color: var(--bg, #0b1220);
+}
+
+:root {
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --accent: #06b6d4;
+  --primary: #60a5fa;
+  --bg: #0b1220;
+  --surface: #0f1724;
+  --muted: #94a3b8;
+  --text-main: #e6eef8;
 }
 
 /* Custom Scrollbar */
@@ -17,19 +29,19 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #F8FAFC;
+  background: #f8fafc;
 }
 ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
+  background: #cbd5e1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94A3B8;
+  background: #94a3b8;
 }
 
 /* Premium Buttons */
 .btn-primary {
-  @apply bg-primary hover:bg-blue-700 text-white font-semibold px-6 py-2.5 rounded-lg transition-all duration-300 transform hover:-translate-y-0.5 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  @apply bg-accent text-white font-semibold px-6 py-2.5 rounded-[var(--radius-md)] transition-all duration-300 transform hover:-translate-y-0.5 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
 }
 
 .btn-secondary {
@@ -37,12 +49,12 @@ body {
 }
 
 .btn-accent {
-  @apply bg-accent hover:bg-teal-700 text-white font-semibold px-6 py-2.5 rounded-lg transition-all duration-300 transform hover:-translate-y-0.5 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  @apply bg-accent text-white font-semibold px-6 py-2.5 rounded-[var(--radius-md)] transition-all duration-300 transform hover:-translate-y-0.5 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
 }
 
 /* Glassmorphism Header */
 .glass-header {
-  @apply sticky top-0 z-50 backdrop-blur-md bg-secondary/90 border-b border-slate-800;
+  @apply sticky top-0 z-50 backdrop-blur-md bg-secondary/85 border-b border-slate-800/60;
 }
 
 /* Mobile Nav Link */
@@ -58,4 +70,15 @@ body {
 /* Project Card Hover Description Overlay */
 .project-overlay {
   @apply absolute inset-0 bg-secondary/90 flex flex-col justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-300 p-6 rounded-xl text-center;
+}
+
+/* Elevated surface utility */
+.elevated {
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+  border-radius: var(--radius-md);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
 }
