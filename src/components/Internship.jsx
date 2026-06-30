@@ -27,7 +27,7 @@ export default function Internship() {
       ),
     },
     {
-      role: "Python Training",
+      role: "Python",
       organization: "EduPyramids, SINE IIT Bombay",
       period: "09/2025 – 11/2025",
       type: "Professional Training",
@@ -51,7 +51,7 @@ export default function Internship() {
       ),
     },
     {
-      role: "Java Business Application Training",
+      role: "Java Business Application",
       organization: "EduPyramids, SINE IIT Bombay",
       period: "09/2025 – 11/2025",
       type: "Professional Training",

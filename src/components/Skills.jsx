@@ -1,24 +1,23 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+import {
+  FaLaptopCode,
+  FaServer,
+  FaDatabase,
+  FaCode,
+  FaTools,
+} from "react-icons/fa";
+
+import { MdOutlineWeb } from "react-icons/md";
+
+import { HiUserGroup } from "react-icons/hi";
+
 export default function Skills() {
   const skillGroups = [
     {
       category: "Front-end",
-      icon: (
-        <svg
-          className='w-6 h-6 text-accent'
-          fill='none'
-          stroke='currentColor'
-          viewBox='0 0 24 24'>
-          <path
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            strokeWidth='2'
-            d='M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z'
-          />
-        </svg>
-      ),
+      icon: FaLaptopCode,
       skills: [
         "HTML5",
         "CSS3",
@@ -30,107 +29,50 @@ export default function Skills() {
       ],
     },
     {
+      category: "Backend",
+      icon: FaServer,
+      skills: ["Node.js", "Express.js", "REST API"],
+    },
+    {
       category: "Web Concepts",
-      icon: (
-        <svg
-          className='w-6 h-6 text-accent'
-          fill='none'
-          stroke='currentColor'
-          viewBox='0 0 24 24'>
-          <path
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            strokeWidth='2'
-            d='M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10'
-          />
-        </svg>
-      ),
+      icon: MdOutlineWeb,
       skills: [
         "DOM Manipulation",
         "React Hooks",
         "Component Architecture",
-        "REST API Basics",
         "JSON",
-        "json server.",
+        "State Management",
+        "Params",
+        "Routes",
       ],
     },
     {
       category: "Database",
-      icon: (
-        <svg
-          className='w-6 h-6 text-accent'
-          fill='none'
-          stroke='currentColor'
-          viewBox='0 0 24 24'>
-          <path
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            strokeWidth='2'
-            d='M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4'
-          />
-        </svg>
-      ),
-      skills: ["MongoDb"],
+      icon: FaDatabase,
+      skills: ["MongoDB", "JSON Server db"],
     },
     {
       category: "Programming Languages",
-      icon: (
-        <svg
-          className='w-6 h-6 text-accent'
-          fill='none'
-          stroke='currentColor'
-          viewBox='0 0 24 24'>
-          <path
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            strokeWidth='2'
-            d='M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4'
-          />
-        </svg>
-      ),
-      skills: ["C++", "Java", "Python - (Basics)"],
+      icon: FaCode,
+      skills: ["C++", "Java", "Python (Basics)"],
     },
     {
       category: "Tools",
-      icon: (
-        <svg
-          className='w-6 h-6 text-accent'
-          fill='none'
-          stroke='currentColor'
-          viewBox='0 0 24 24'>
-          <path
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            strokeWidth='2'
-            d='M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z'
-          />
-        </svg>
-      ),
+      icon: FaTools,
       skills: [
         "Git",
         "GitHub",
         "VS Code",
-        "Chrome DevTools",
-        "Ms Excel",
+        "Thunderclient",
+        "Chrome Dev Tools",
+        "Postman",
+        "MS Excel",
         "Office Tools",
       ],
     },
     {
       category: "Soft Skills",
-      icon: (
-        <svg
-          className='w-6 h-6 text-accent'
-          fill='none'
-          stroke='currentColor'
-          viewBox='0 0 24 24'>
-          <path
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            strokeWidth='2'
-            d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z'
-          />
-        </svg>
-      ),
+      icon: HiUserGroup,
       skills: [
         "Problem Solving",
         "Team Collaboration",
@@ -139,25 +81,24 @@ export default function Skills() {
       ],
     },
   ];
-
   return (
     <section
       className='bg-white py-20 px-6 md:px-20 border-b border-slate-100'
       id='skills'>
-      <div className='max-w-6xl mx-auto'>
-        <div className='text-center md:text-left mb-12'>
-          <h2 className='font-outfit font-extrabold text-3xl md:text-4xl text-textMain tracking-tight'>
-            Technical Expertise
-          </h2>
-          <div className='h-1 w-20 bg-accent mt-2 rounded mx-auto md:mx-0'></div>
-          <p className='pt-4 text-textMuted text-base max-w-xl font-light'>
-            A breakdown of my frontend core competency, backend knowledge,
-            programming languages, and workflows.
-          </p>
-        </div>
-
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-          {skillGroups.map((group, idx) => (
+      <div className='max-w-6xl mx-auto mb-12 text-center md:text-left'>
+        <h2 className='font-outfit font-extrabold text-3xl md:text-4xl text-textMain tracking-tight'>
+          Skills
+        </h2>
+        <div className='h-1 w-20 bg-accent mt-3 rounded'></div>
+        <p className='mt-4 text-textMuted text-base max-w-3xl font-light'>
+          A snapshot of the technologies, tools, and soft skills I use to build
+          modern, responsive web applications and collaborate effectively.
+        </p>
+      </div>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+        {skillGroups.map((group, idx) => {
+          const Icon = group.icon;
+          return (
             <motion.div
               key={idx}
               className='bg-surface border border-slate-100 p-6 rounded-2xl hover:shadow-lg transition-all duration-300'
@@ -165,27 +106,30 @@ export default function Skills() {
               initial={{ opacity: 0, y: 6 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}>
-              <div className='flex items-center space-x-3 mb-4'>
-                <div className='bg-white border border-slate-200/60 p-2.5 rounded-xl flex items-center justify-center shadow-sm'>
-                  {group.icon}
+              {/* Card Header */}
+              <div className='flex items-center gap-3 mb-5'>
+                <div className='bg-white border border-slate-200/60 p-3 rounded-xl shadow-sm'>
+                  <Icon className='w-6 h-6 text-accent' />
                 </div>
-                <h3 className='font-outfit font-bold text-lg text-textMain leading-tight'>
+
+                <h3 className='font-outfit font-bold text-lg text-textMain'>
                   {group.category}
                 </h3>
               </div>
 
-              <div className='flex flex-wrap gap-2 pt-2'>
+              {/* Skills */}
+              <div className='flex flex-wrap gap-2'>
                 {group.skills.map((skill) => (
                   <span
                     key={skill}
-                    className='text-xs font-medium px-3 py-1.5 rounded-lg bg-white text-textMain shadow-sm border border-slate-200/50 hover:border-accent hover:text-accent transition-colors duration-200'>
+                    className='px-3 py-1.5 text-sm rounded-lg bg-white border border-slate-200 text-textMain shadow-sm transition-all duration-200 hover:border-accent hover:text-accent hover:shadow-md'>
                     {skill}
                   </span>
                 ))}
               </div>
             </motion.div>
-          ))}
-        </div>
+          );
+        })}
       </div>
     </section>
   );

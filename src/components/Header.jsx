@@ -13,6 +13,7 @@ export default function Header() {
     { name: "Internships", href: "#internship" },
     { name: "Education", href: "#education" },
     { name: "Certifications", href: "#certifications" },
+    { name: "Resume", href: "#resume" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -25,7 +26,7 @@ export default function Header() {
       <a
         className='font-outfit font-extrabold text-2xl tracking-tight text-white hover:opacity-90 transition-opacity'
         href='#home'>
-        Kamalesh<span className='text-accent font-black'>.</span>
+        Kamalesh <span className='text-accent font-black'>- Portfolio</span>
       </a>
 
       {/* Desktop Navigation */}

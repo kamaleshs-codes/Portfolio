@@ -1,5 +1,6 @@
-import HeroImg from "../assets/hero.png";
+import Myprofile from "../assets/Myprofile.png";
 import { motion } from "framer-motion";
+import { MdEmail } from "react-icons/md";
 
 export default function Hero() {
   return (
@@ -22,10 +23,11 @@ export default function Hero() {
           </span>
         </div>
 
-        <h1 className='font-outfit font-extrabold text-5xl md:text-7xl tracking-tight leading-tight'>
-          Hello, <br />
+        <h1 className='font-outfit font-extrabold text-4xl md:text-7xl tracking-tight leading-tight'>
+          Hello, I am
+          <br />
           <span className='bg-clip-text bg-gradient-to-r from-primary-light to-accent'>
-          I am Kamalesh S
+            Kamalesh S
           </span>
         </h1>
 
@@ -36,9 +38,11 @@ export default function Hero() {
 
         <p className='text-slate-400 max-w-xl text-base md:text-lg leading-relaxed font-light'>
           Motivated Computer Science postgraduate with hands-on experience in
-          Front-End Web Development using HTML5, CSS3, JavaScript (ES6+),
-          Bootstrap, and React.js. Passionate about creating modern,
-          user-friendly web solutions.
+          Web Development using HTML5, CSS3, JavaScript (ES6+), Bootstrap, and
+          React.js. Skilled in building responsive, user-friendly web
+          applications with a strong foundation in UI development and
+          problem-solving. Currently improving my skills in Node.js, Express.js,
+          RESTful APIs, and CRUD operations.
         </p>
 
         {/* Call to Actions */}
@@ -47,6 +51,11 @@ export default function Hero() {
             href='#project'
             className='btn-accent text-center shadow-lg shadow-accent/20'>
             View Projects
+          </a>
+          <a
+            href='#resume'
+            className='btn-primary text-center text-sky-400 font-semibold hover:text-blue-700 hover:bg-white'>
+            Download Resume
           </a>
           <a
             href='#contact'
@@ -77,6 +86,12 @@ export default function Hero() {
               <path d='M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z' />
             </svg>
           </a>
+          <a
+            href='mailto:skamalesh0204@outlook.com'
+            className='text-slate-400 hover:text-accent transition-all duration-30'
+            aria-label='Email'>
+            <MdEmail size={26}></MdEmail>
+          </a>
         </div>
       </motion.div>
 
@@ -91,7 +106,7 @@ export default function Hero() {
           <motion.img
             whileHover={{ scale: 1.02 }}
             className='w-72 h-72 md:w-96 md:h-96 rounded-2xl object-cover border-2 border-slate-700/50 relative shadow-2xl transition-transform duration-300'
-            src={HeroImg}
+            src={Myprofile}
             alt='Kamalesh S - Developer Avatar'
           />
         </div>
