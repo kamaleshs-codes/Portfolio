@@ -32,8 +32,8 @@ export default function Hero() {
         </h1>
 
         <h2 className='text-xl md:text-2xl font-bold text-slate-200'>
-          Web Developer <span className='text-accent'>|</span> Computer Science
-          Postgraduate
+          Web Developer <span className='text-accent'>|</span> Full Stack
+          Developer <span className='text-accent'>|</span> Mern Stack
         </h2>
 
         <p className='text-slate-400 max-w-xl text-base md:text-lg leading-relaxed font-light'>

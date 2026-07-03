@@ -15,7 +15,7 @@ export default function About() {
           <img
             src={ProfileImg}
             alt='Profile'
-            className='w-44 h-44 md:w-56 md:h-56 rounded-2xl object-cover border border-slate-100 shadow-md'
+            className='w-44 h-44 md:w-full md:h-56 rounded-2xl object-cover border border-slate-100 shadow-md'
           />
 
           {/* Info Card */}
