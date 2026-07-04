@@ -16,8 +16,8 @@ export default function Project() {
         "Responsive job application tracking platform with dashboard and status management features.",
         "Visualized application status and company trends using dynamic charts.",
       ],
-      githublink: "",
-      livelink: "",
+      githublink: "https://github.com/kamaleshs-codes/Job_Tracker",
+      livelink: "https://job-tracker-frontend-w3jk.onrender.com",
     },
     {
       title: "Real-time Chat Web App",
@@ -36,8 +36,8 @@ export default function Project() {
         "Implemented JWT-based authentication, password hashing with bcrypt, and protected routes for secure user access.",
         "Built real-time one-to-one messaging functionality using Socket.IO, enabling instant communication between users.",
       ],
-      githublink: "",
-      livelink: "",
+      githublink: "https://github.com/kamaleshs-codes/Chat_webapp",
+      livelink: "https://chat-webapp-frontend-160d.onrender.com",
     },
     {
       title: "E-Commerce Website",
@@ -56,8 +56,8 @@ export default function Project() {
         "Implemented a dynamic product catalog/cart and end-to-end order processing.",
         "Multi-page responsive e-commerce site featuring product listings and interactive UI.",
       ],
-      githublink: "",
-      livelink: "",
+      githublink: "https://github.com/kamaleshs-codes/E-commerce_webapp",
+      livelink: "https://e-commerce-webapp-frontend-88mu.onrender.com",
     },
     {
       title: "Instagram Clone",
@@ -71,7 +71,7 @@ export default function Project() {
         "Applied React state management and routing concepts.",
       ],
       githublink: "https://github.com/kamaleshs-codes/Instagram-clone/",
-      livelink: "",
+      livelink: " https://kamaleshs-codes.github.io/Instagram-clone/",
     },
   ];
 

@@ -35,8 +35,8 @@ export default function Resume() {
 
           <div className='flex flex-wrap gap-4 pt-2'>
             <a
-              href='/Kamalesh_Resume.pdf'
-              download='Kamalesh_Resume.pdf'
+              href={`${import.meta.env.BASE_URL}resume/Kamalesh_S_Resume.pdf`}
+              download='Kamalesh_S_Resume.pdf'
               className='btn-accent text-center shadow-lg shadow-accent/20 flex items-center justify-center space-x-2'>
               <svg
                 className='w-5 h-5'
@@ -54,7 +54,7 @@ export default function Resume() {
             </a>
 
             <a
-              href='/Kamalesh_Resume.pdf'
+              href={`${import.meta.env.BASE_URL}resume/Kamalesh_S_Resume.pdf`}
               target='_blank'
               rel='noopener noreferrer'
               className='btn-secondary text-center flex items-center justify-center space-x-2'>

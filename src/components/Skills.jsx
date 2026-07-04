@@ -31,7 +31,7 @@ export default function Skills() {
     {
       category: "Backend",
       icon: FaServer,
-      skills: ["Node.js", "Express.js", "REST API"],
+      skills: ["Node.js", "Express.js", "REST API", "JWT Authentication"],
     },
     {
       category: "Web Concepts",
@@ -43,21 +43,22 @@ export default function Skills() {
         "JSON",
         "State Management",
         "Params",
-        "Routes",
+        "Routing",
+        "CRUD operations"
       ],
     },
     {
       category: "Database",
       icon: FaDatabase,
-      skills: ["MongoDB", "JSON Server db"],
+      skills: ["MongoDB", "JSON Server DB", "Mongoose"],
     },
     {
-      category: "Programming Languages",
+      category: "Programming Languages-Basics",
       icon: FaCode,
-      skills: ["C++", "Java", "Python (Basics)"],
+      skills: ["C++", "Java", "Python"],
     },
     {
-      category: "Tools",
+      category: "Tools & Platforms",
       icon: FaTools,
       skills: [
         "Git",
@@ -66,6 +67,8 @@ export default function Skills() {
         "Thunderclient",
         "Chrome Dev Tools",
         "Postman",
+        "Render",
+        "MongoDB Atlas",
         "MS Excel",
         "Office Tools",
       ],

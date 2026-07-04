@@ -1,7 +1,75 @@
 import { motion } from "framer-motion";
 import ProfileImg from "../assets/about.png";
+import {
+  FaUser,
+  FaGraduationCap,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+  FaEnvelope,
+  FaLanguage,
+} from "react-icons/fa";
 
 export default function About() {
+  const aboutContent = {
+    title: "About Me",
+
+    subtitle: "Get to know me better",
+
+    paragraphs: [
+      "I'm a Computer Science postgraduate and MERN Stack Developer with hands-on experience building scalable web applications.",
+
+      "I enjoy transforming ideas into real-world solutions using React.js, Node.js, Express.js, MongoDB, and Tailwind CSS. Through multiple projects, I've gained practical experience in RESTful APIs, JWT authentication, CRUD operations, deployment, and real-time communication using Socket.IO.",
+
+      "I'm passionate about continuously improving my development skills, exploring AI-assisted software development, and building clean, responsive, and user-focused applications.",
+    ],
+  };
+
+  const personalInfo = [
+    {
+      label: "Name",
+      value: "Kamalesh S",
+      icon: FaUser,
+    },
+    {
+      label: "Education",
+      value: "M.Sc Computer Science",
+      icon: FaGraduationCap,
+    },
+    {
+      label: "Phone",
+      value: "+91 63699 16750",
+      icon: FaPhoneAlt,
+    },
+    {
+      label: "Location",
+      value: "Kanchipuram, Tamil Nadu",
+      icon: FaMapMarkerAlt,
+    },
+    {
+      label: "Email",
+      value: "skamalesh0204@outlook.com",
+      icon: FaEnvelope,
+    },
+    {
+      label: "Languages",
+      value: "English, Tamil",
+      icon: FaLanguage,
+    },
+  ];
+
+  const technicalHighlights = [
+    "HTML5, CSS3, JavaScript (ES6+)",
+    "React.js, Tailwind CSS, Bootstrap",
+    "Node.js, Express.js, RESTful APIs",
+    "JWT Authentication",
+    "CRUD Operations",
+    "MongoDB",
+    "Socket.IO",
+    "Git & GitHub",
+    "Postman & Thunder Client",
+    "Problem Solving & Team Collaboration",
+  ];
+
   return (
     <section id='about' className='py-20 px-6 md:px-20 bg-surface'>
       <div className='max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-start'>
@@ -18,47 +86,34 @@ export default function About() {
             className='w-44 h-44 md:w-full md:h-56 rounded-2xl object-cover border border-slate-100 shadow-md'
           />
 
-          {/* Info Card */}
           <div className='w-full bg-white rounded-2xl shadow-md border border-slate-200 p-6'>
-            <div className='flex justify-between py-3 border-b border-slate-200'>
-              <span className='text-slate-500 font-medium'>Name</span>
-              <span className='font-semibold text-textMain'>Kamalesh S</span>
-            </div>
+            {personalInfo.map((info, index) => {
+              const Icon = info.icon;
 
-            <div className='flex justify-between py-3 border-b border-slate-200'>
-              <span className='text-slate-500 font-medium'>Education</span>
-              <span className='font-semibold text-textMain text-right'>
-                M.Sc Computer Science
-              </span>
-            </div>
+              return (
+                <div
+                  key={info.label}
+                  className={`flex items-start gap-4 py-4 ${
+                    index !== personalInfo.length - 1
+                      ? "border-b border-slate-200"
+                      : ""
+                  }`}>
+                  <div className='mt-1 text-accent'>
+                    <Icon size={18} />
+                  </div>
 
-            <div className='flex justify-between py-3 border-b border-slate-200'>
-              <span className='text-slate-500 font-medium'>Phone</span>
-              <span className='font-semibold text-textMain text-right'>
-                +91 63699 16750
-              </span>
-            </div>
+                  <div className='flex-1'>
+                    <p className='text-sm text-slate-500 font-medium'>
+                      {info.label}
+                    </p>
 
-            <div className='flex justify-between py-3 border-b border-slate-200'>
-              <span className='text-slate-500 font-medium'>Location</span>
-              <span className='font-semibold text-textMain text-right'>
-                Kanchipuram, Tamil Nadu
-              </span>
-            </div>
-
-            <div className='flex justify-between py-3 border-b border-slate-200'>
-              <span className='text-slate-500 font-medium'>Email</span>
-              <span className='font-semibold text-textMain text-right break-all'>
-                skamalesh0204@outlook.com
-              </span>
-            </div>
-
-            <div className='flex justify-between pt-3'>
-              <span className='text-slate-500 font-medium'>Languages</span>
-              <span className='font-semibold text-textMain'>
-                English, Tamil
-              </span>
-            </div>
+                    <p className='mt-1 font-semibold text-textMain break-words'>
+                      {info.value}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </motion.div>
 
@@ -68,41 +123,44 @@ export default function About() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.08 }}>
+          {/* Section Heading */}
           <h2 className='font-outfit font-extrabold text-3xl text-textMain'>
-            About Me
+            {aboutContent.title}
           </h2>
 
           <div className='h-1 w-16 bg-accent rounded mt-3 mb-6'></div>
 
-          <h3 className='text-2xl font-semibold mb-6'>Get to know me better</h3>
+          <h3 className='text-2xl font-semibold mb-6'>
+            {aboutContent.subtitle}
+          </h3>
 
-          <p className='text-slate-800 leading-relaxed mb-6'>
-            I'm <span className='text-accent font-semibold'>Kamalesh S</span>, a
-            Computer Science postgraduate and aspiring Web Developer with strong
-            experience in building responsive, user-friendly applications.
-            <br />
-            <br />
-            I enjoy transforming ideas into real-world solutions using HTML5,
-            CSS3, JavaScript (ES6+), Bootstrap, React.js, and Tailwind CSS.
-            Through hands-on projects, I've gained experience in responsive UI
-            design, component-based architecture, DOM manipulation, and frontend
-            state management.
-            <br />
-            <br />
-            I'm currently improving my backend skills in Node.js, Express.js,
-            RESTful APIs, and CRUD operations while continuing to build modern
-            web solutions with clean interfaces and practical UX.
-          </p>
+          {/* About Description */}
+          <div className='space-y-5 text-slate-800 leading-relaxed mb-6'>
+            {aboutContent.paragraphs.map((paragraph, index) => (
+              <p key={index}>
+                {index === 0 ? (
+                  <>
+                    <span className='text-accent font-semibold'>
+                      I'm Kamalesh S
+                    </span>
+                    {paragraph.replace("I'm", ",")}
+                  </>
+                ) : (
+                  paragraph
+                )}
+              </p>
+            ))}
+          </div>
 
-          <ul className='grid grid-cols-1 sm:grid-cols-2 gap-3 text-primary'>
-            <li>✔ Proficient: HTML5, CSS3, JavaScript (ES6+)</li>
-            <li>✔ Frontend: React.js, Tailwind CSS, Bootstrap</li>
-            <li>✔ Backend: Node.js, Express.js, REST API</li>
-            <li>✔ Databases: MongoDB, JSON Server db</li>
-            <li>✔ Web Concepts: DOM, State Management, Routing</li>
-            <li>✔ Programming: C++, Java, Python (Basics)</li>
-            <li>✔ Tools: Git, GitHub, VS Code, Postman, Thunderclient</li>
-            <li>✔ Soft Skills: Problem Solving, Team Collaboration</li>
+          {/* Technical Highlights */}
+          <ul className='grid grid-cols-1 sm:grid-cols-2 gap-3'>
+            {technicalHighlights.map((skill) => (
+              <li key={skill} className='flex items-start gap-2 text-textMain'>
+                <span className='text-accent font-bold mt-0.5'>✔</span>
+
+                <span>{skill}</span>
+              </li>
+            ))}
           </ul>
         </motion.div>
       </div>
