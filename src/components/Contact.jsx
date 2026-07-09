@@ -67,7 +67,7 @@ export default function Contact() {
 
   return (
     <section
-      className='bg-secondary text-white py-20 px-6 md:px-20 relative overflow-hidden'
+      className='bg-primary text-white py-20 px-6 md:px-20 relative overflow-hidden'
       id='contact'>
       {/* Background visual element */}
       <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl pointer-events-none'></div>
@@ -78,7 +78,7 @@ export default function Contact() {
             Get In Touch
           </h2>
           <div className='h-1 w-20 bg-accent mt-2 rounded mx-auto'></div>
-          <p className='pt-4 text-slate-400 text-base max-w-lg mx-auto font-light'>
+          <p className='pt-4 text-white text-base max-w-lg mx-auto font-light'>
             If you want to discuss a project, query code, or chat about frontend
             opportunities, feel free to reach out. I will get back to you as
             soon as possible.

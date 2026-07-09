@@ -8,7 +8,7 @@ export default function Hero() {
   const heroContent = {
     status: "Available for Opportunities",
 
-    greeting: "Hello, I am",
+    greeting: "Hello, I'm",
 
     name: "Kamalesh S",
 
@@ -22,19 +22,18 @@ export default function Hero() {
     {
       label: "View Projects",
       href: "#project",
-      className: "btn-accent shadow-lg shadow-accent/20",
+      className: "btn-primary",
     },
     {
-      label: "Resume",
-      href: "#resume",
-      className:
-        "btn-primary text-sky-400 font-semibold hover:text-blue-700 hover:bg-white",
+      label: "Download Resume",
+      href: `${import.meta.env.BASE_URL}resume/Kamalesh_S_Resume.pdf`,
+      download: true,
+      className: "btn-secondary",
     },
     {
       label: "Contact Me",
       href: "#contact",
-      className:
-        "btn-secondary text-white hover:text-secondary border-slate-700 hover:bg-white transition-all",
+      className: "btn-accent",
     },
   ];
 
@@ -59,109 +58,121 @@ export default function Hero() {
   return (
     <section
       id='home'
-      className='relative flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-20 md:py-28 bg-secondary overflow-hidden'>
-      {/* Background */}
-      <div className='absolute top-0 right-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl -mr-20 -mt-20'></div>
-      <div className='absolute bottom-0 left-0 w-80 h-80 bg-primary/10 rounded-full blur-3xl -ml-20 -mb-20'></div>
+      className='relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 px-6 py-20 md:px-20 md:py-28'>
+      {/* Background Effects - Cleaned up to match new theme */}
+      <div className='absolute -top-24 -right-24 h-80 w-80 rounded-full bg-indigo-500/10 blur-3xl'></div>
 
-      {/* Left Content */}
-      <motion.div
-        className='w-full md:w-1/2 flex flex-col justify-center text-white z-10 space-y-6'
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}>
-        {/* Status */}
-        <div className='inline-flex items-center gap-2 bg-slate-800/80 border border-slate-700 px-3 py-1 rounded-full w-fit'>
-          <span className='w-2 h-2 rounded-full bg-accent animate-pulse'></span>
+      <div className='absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-sky-500/10 blur-3xl'></div>
 
-          <span className='text-xs font-semibold uppercase tracking-wider text-slate-300'>
-            {heroContent.status}
-          </span>
-        </div>
+      <div className='relative z-10 mx-auto flex max-w-7xl flex-col-reverse items-center justify-between gap-16 md:flex-row'>
+        {/* Left */}
+        <motion.div
+          className='flex w-full flex-col justify-center space-y-7 md:w-1/2'
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}>
+          {/* Status */}
 
-        {/* Heading */}
-        <div>
-          <h1 className='font-outfit font-extrabold text-4xl md:text-7xl tracking-tight leading-tight'>
-            {heroContent.greeting}
-            <br />
+          <div className='inline-flex w-fit items-center gap-2 rounded-full border border-slate-700/50 bg-slate-800/40 px-4 py-2 backdrop-blur'>
+            <span className='h-2 w-2 rounded-full bg-sky-400 animate-pulse'></span>
 
-            <span className='bg-clip-text bg-gradient-to-r from-primary-light to-accent'>
-              {heroContent.name}
+            <span className='text-xs font-semibold uppercase tracking-[0.2em] text-slate-300'>
+              {heroContent.status}
             </span>
-          </h1>
-        </div>
+          </div>
 
-        {/* Roles */}
-        <h2 className='text-xl md:text-2xl font-bold text-slate-200'>
-          {heroContent.roles.map((role, index) => (
-            <span key={role}>
-              {role}
+          {/* Heading */}
 
-              {index !== heroContent.roles.length - 1 && (
-                <span className='text-accent px-2'>|</span>
-              )}
-            </span>
-          ))}
-        </h2>
+          <div>
+            <h1 className='font-outfit text-4xl font-extrabold leading-tight text-white md:text-6xl lg:text-7xl'>
+              {heroContent.greeting}
+              <br />
 
-        {/* Description */}
-        <p className='text-slate-400 max-w-xl text-base md:text-lg leading-relaxed font-light'>
-          {heroContent.description}
-        </p>
+              <span className='bg-gradient-to-r from-indigo-400 to-sky-400 bg-clip-text text-transparent'>
+                {heroContent.name}
+              </span>
+            </h1>
+          </div>
 
-        {/* Buttons */}
-        <div className='flex flex-wrap gap-4 pt-2'>
-          {buttons.map((button) => (
-            <a
-              key={button.label}
-              href={button.href}
-              className={`${button.className} text-center`}>
-              {button.label}
-            </a>
-          ))}
-        </div>
+          {/* Roles */}
 
-        {/* Social Links */}
-        <div className='flex items-center gap-5 pt-4'>
-          {socials.map((social) => {
-            const Icon = social.icon;
+          <h2 className='text-lg font-semibold text-slate-300 md:text-2xl'>
+            {heroContent.roles.map((role, index) => (
+              <span key={role}>
+                {role}
 
-            return (
+                {index !== heroContent.roles.length - 1 && (
+                  <span className='px-2 text-indigo-400'>|</span>
+                )}
+              </span>
+            ))}
+          </h2>
+
+          {/* Description */}
+
+          <p className='max-w-xl text-base leading-8 text-slate-400 md:text-lg'>
+            {heroContent.description}
+          </p>
+
+          {/* Buttons */}
+
+          <div className='flex flex-wrap gap-4 pt-2'>
+            {buttons.map((button) => (
               <a
-                key={social.label}
-                href={social.href}
-                target={social.href.startsWith("http") ? "_blank" : undefined}
-                rel={
-                  social.href.startsWith("http")
-                    ? "noopener noreferrer"
-                    : undefined
-                }
-                aria-label={social.label}
-                className='text-slate-400 transition-all duration-300 hover:text-accent hover:-translate-y-1'>
-                <Icon size={26} />
+                key={button.label}
+                href={button.href}
+                download={button.download}
+                className={`${button.className} text-center`}>
+                {button.label}
               </a>
-            );
-          })}
-        </div>
-      </motion.div>
+            ))}
+          </div>
 
-      {/* Right Image */}
-      <motion.div
-        className='w-full md:w-1/2 flex justify-center md:justify-end mt-12 md:mt-0 z-10'
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.7 }}>
-        <div className='relative group'>
-          <div className='absolute inset-0 rounded-2xl bg-gradient-to-tr from-primary to-accent opacity-30 blur-xl transition-opacity duration-300 group-hover:opacity-40'></div>
+          {/* Socials */}
 
-          <motion.img
-            src={profileimg}
-            alt='Kamalesh S'
-            className='relative w-72 h-72 md:w-96 md:h-96 rounded-2xl object-cover border-2 border-slate-700/50 shadow-2xl'
-            whileHover={{ scale: 1.02 }}
-          />
-        </div>
-      </motion.div>
+          <div className='flex items-center gap-6 pt-3'>
+            {socials.map((social) => {
+              const Icon = social.icon;
+
+              return (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target={social.href.startsWith("http") ? "_blank" : undefined}
+                  rel={
+                    social.href.startsWith("http")
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
+                  aria-label={social.label}
+                  className='text-slate-400 transition-all duration-300 hover:-translate-y-1 hover:text-sky-400'>
+                  <Icon size={27} />
+                </a>
+              );
+            })}
+          </div>
+        </motion.div>
+
+        {/* Right */}
+
+        <motion.div
+          className='flex w-full justify-center md:w-1/2 md:justify-end'
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}>
+          <div className='group relative'>
+            <div className='absolute inset-0 rounded-3xl bg-gradient-to-r from-indigo-500/20 to-sky-500/20 blur-3xl transition-opacity duration-300 group-hover:opacity-100'></div>
+
+            <motion.img
+              src={profileimg}
+              alt='Kamalesh S'
+              className='relative h-72 w-72 rounded-3xl border border-slate-800/80 object-cover shadow-2xl md:h-96 md:w-96'
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.3 }}
+            />
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 }

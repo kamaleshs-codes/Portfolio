@@ -8,20 +8,32 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
-  color: var(--text-main, #0f1724);
-  background-color: var(--bg, #0b1220);
+  color: var(--text-main);
+  background: var(--bg);
 }
 
 :root {
   --radius-sm: 12px;
   --radius-md: 18px;
   --radius-lg: 24px;
-  --accent: #06b6d4;
-  --primary: #2020f5;
-  --bg: #0b1220;
-  --surface: #0f1724;
-  --muted: #94a3b8;
-  --text-main: #e6eef8;
+
+  /* Brand - Sophisticated Indigo & Teal Accent */
+  --primary: #6366f1; /* Modern Indigo */
+  --primary-hover: #4f46e5; /* Deeper Premium Indigo */
+  --accent: #0ea5e9; /* Vibrant Sky Blue */
+  --accent-hover: #0284c7; /* Richer Deep Sky Blue */
+
+  /* Backgrounds - Professional Dark Slate Theme */
+  --bg: #0f172a; /* Deep Slate / Navy */
+  --surface: #1e293b; /* Sleek Card Background */
+  --surface-secondary: #334155; /* Section dividers / Muted surfaces */
+
+  /* Text - High Contrast & Clean Hierarchy */
+  --text-main: #f8fafc; /* Off-white for crisp readability */
+  --text-muted: #94a3b8; /* Soft Slate for descriptions */
+
+  /* Border */
+  --border: #334155;
 }
 
 /* Custom Scrollbar */
@@ -29,59 +41,66 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f8fafc;
+  background: #0f172a;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #334155;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #475569;
 }
 
 /* Premium Buttons */
 .btn-primary {
-  @apply bg-primary text-white font-semibold px-6 py-2.5 rounded-[var(--radius-md)] transition-all duration-300 transform hover:-translate-y-0.5 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  /* Hovers to a deep premium indigo, scales smoothly, and adds a soft colored glow shadow */
+  @apply bg-indigo-600 text-white font-semibold px-6 py-2.5 rounded-xl transition-all duration-300 shadow-md shadow-indigo-600/10 hover:bg-indigo-500 hover:shadow-xl hover:shadow-indigo-500/20 hover:-translate-y-0.5;
 }
 
 .btn-secondary {
-  @apply bg-transparent hover:bg-slate-100 text-primary border border-primary font-semibold px-6 py-2.5 rounded-lg transition-all duration-300 transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  /* Modern clean outline-style hover that fills into a sleek slate gray */
+  @apply bg-transparent border border-slate-700 text-slate-200 font-semibold px-6 py-2.5 rounded-xl transition-all duration-300 hover:bg-slate-800 hover:border-slate-600 hover:text-white;
 }
 
 .btn-accent {
-  @apply bg-accent text-white font-semibold px-6 py-2.5 rounded-[var(--radius-md)] transition-all duration-300 transform hover:-translate-y-0.5 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  /* Hovers to a bright, energetic sky blue with a corresponding accent glow shadow */
+  @apply bg-sky-800 text-white font-semibold px-6 py-2.5 rounded-xl transition-all duration-300 shadow-md shadow-sky-500/10 hover:bg-sky-400 hover:shadow-xl hover:shadow-sky-400/20 hover:-translate-y-0.5;
+}
+
+.btn-resume {
+  /* Clean interactive transition for your resume file action */
+  @apply bg-white border border-indigo-500 text-indigo-400 font-semibold px-6 py-2.5 rounded-xl transition-all duration-300 hover:bg-indigo-500/10 hover:border-indigo-400 hover:text-indigo-300;
 }
 
 /* Glassmorphism Header */
 .glass-header {
-  @apply sticky top-0 z-50 backdrop-blur-md bg-secondary/85 border-b border-slate-800/60;
+  @apply sticky top-0 z-50 backdrop-blur-md bg-slate-900/80 border-b border-slate-800/60;
 }
 
 /* Mobile Nav Link */
 .mobile-nav-link {
-  @apply text-lg text-slate-300 hover:text-accent font-medium py-3 border-b border-slate-800 w-full text-center transition-colors duration-200;
+  @apply text-lg text-slate-300 hover:text-sky-400 font-medium py-3 border-b border-slate-800 w-full text-center transition-colors duration-200;
 }
 
 /* Timeline Custom Styles */
 .timeline-dot {
-  @apply absolute left-[-6px] top-1.5 w-3 h-3 rounded-full bg-accent border-2 border-white shadow;
+  @apply absolute left-[-6px] top-1.5 w-3 h-3 rounded-full bg-sky-400 border-2 border-slate-900 shadow;
 }
 
 /* Project Card Hover Description Overlay */
 .project-overlay {
-  @apply absolute inset-0 bg-secondary/90 flex flex-col justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-300 p-6 rounded-xl text-center;
+  @apply absolute inset-0 bg-slate-900/95 flex flex-col justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-300 p-6 rounded-xl text-center;
 }
 
 /* Elevated surface utility */
 .elevated {
-  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.02),
-    rgba(255, 255, 255, 0.01)
-  );
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
 }
-.btn-resume{
-  border: #0162ff;
+
+.btn-resume {
+  @apply border border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white px-6 py-2.5 rounded-xl transition-all duration-300;
 }
