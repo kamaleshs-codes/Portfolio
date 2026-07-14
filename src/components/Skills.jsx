@@ -2,6 +2,24 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import {
+  SiReact,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+  SiTailwindcss,
+  SiBootstrap,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiGit,
+  SiGithub,
+  SiPostman,
+  SiVite,
+  SiRender,
+  SiSocketdotio,
+} from "react-icons/si";
+
+import {
   FaLaptopCode,
   FaServer,
   FaDatabase,
@@ -14,6 +32,24 @@ import { MdOutlineWeb } from "react-icons/md";
 import { HiUserGroup } from "react-icons/hi";
 
 export default function Skills() {
+  const techStack = [
+    { name: "HTML5", icon: SiHtml5, color: "#E34F26" },
+    { name: "CSS3", icon: SiCss3, color: "#1572B6" },
+    { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+    { name: "React", icon: SiReact, color: "#61DAFB" },
+    { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4" },
+    { name: "Bootstrap", icon: SiBootstrap, color: "#7952B3" },
+    { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+    { name: "Express", icon: SiExpress, color: "#ffffff" },
+    { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+    { name: "Socket.IO", icon: SiSocketdotio, color: "#ffffff" },
+    { name: "Git", icon: SiGit, color: "#F05032" },
+    { name: "GitHub", icon: SiGithub, color: "#ffffff" },
+    { name: "Postman", icon: SiPostman, color: "#FF6C37" },
+    { name: "Vite", icon: SiVite, color: "#646CFF" },
+    { name: "Render", icon: SiRender, color: "#46E3B7" },
+  ];
+
   const skillGroups = [
     {
       category: "Front-end",
@@ -44,7 +80,7 @@ export default function Skills() {
         "State Management",
         "Params",
         "Routing",
-        "CRUD operations"
+        "CRUD operations",
       ],
     },
     {
@@ -88,6 +124,7 @@ export default function Skills() {
     <section
       className='bg-white py-20 px-6 md:px-20 border-b border-slate-100'
       id='skills'>
+      {/* Header */}
       <div className='max-w-6xl mx-auto mb-12 text-center md:text-left'>
         <h2 className='font-outfit font-extrabold text-3xl md:text-4xl text-textMain tracking-tight'>
           Skills
@@ -98,6 +135,25 @@ export default function Skills() {
           modern, responsive web applications and collaborate effectively.
         </p>
       </div>
+
+      {/* Tech stack icons  */}
+      <div className='overflow-hidden py-6'>
+        <div className='marquee'>
+          {[...techStack, ...techStack].map((tech, index) => {
+            const Icon = tech.icon;
+
+            return (
+              <div key={index} className='flex items-center gap-2 px-6'>
+                <Icon size={34} color={tech.color} />
+
+                <span className='text-sm font-medium'>{tech.name}</span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Skills Groups  */}
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
         {skillGroups.map((group, idx) => {
           const Icon = group.icon;

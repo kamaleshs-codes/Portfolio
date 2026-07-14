@@ -104,3 +104,23 @@ body {
 .btn-resume {
   @apply border border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white px-6 py-2.5 rounded-xl transition-all duration-300;
 }
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}

@@ -34,10 +34,12 @@ export default function Resume() {
           </p>
 
           <div className='flex flex-wrap gap-4 pt-2'>
+            {/* Download Resume */}
             <a
-              href={`${import.meta.env.BASE_URL}resume/Kamalesh_S_Resume.pdf`}
-              download='Kamalesh_S_Resume.pdf'
-              className='btn-accent text-center shadow-lg shadow-accent/20 flex items-center justify-center space-x-2'>
+              href='https://drive.google.com/uc?export=download&id=1bZnwNV6dILZ8JwmWuJ3fXhTNM3qG_WNw'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='btn-accent text-center shadow-lg shadow-accent/20 flex items-center justify-center gap-2'>
               <svg
                 className='w-5 h-5'
                 fill='none'
@@ -50,14 +52,16 @@ export default function Resume() {
                   d='M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4'
                 />
               </svg>
+
               <span>Download PDF</span>
             </a>
 
+            {/* View Resume */}
             <a
-              href={`${import.meta.env.BASE_URL}resume/Kamalesh_S_Resume.pdf`}
+              href='https://drive.google.com/file/d/1bZnwNV6dILZ8JwmWuJ3fXhTNM3qG_WNw/view'
               target='_blank'
               rel='noopener noreferrer'
-              className='btn-resume text-center flex items-center justify-center space-x-2'>
+              className='btn-resume text-center flex items-center justify-center gap-2'>
               <svg
                 className='w-5 h-5'
                 fill='none'
@@ -76,7 +80,8 @@ export default function Resume() {
                   d='M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z'
                 />
               </svg>
-              <span>View Online</span>
+
+              <span>View Resume</span>
             </a>
           </div>
         </div>

@@ -26,8 +26,7 @@ export default function Hero() {
     },
     {
       label: "Download Resume",
-      href: `${import.meta.env.BASE_URL}resume/Kamalesh_S_Resume.pdf`,
-      download: true,
+      href: "#resume",
       className: "btn-secondary",
     },
     {
