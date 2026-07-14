@@ -80,7 +80,7 @@ export default function Project() {
       className='bg-surface py-20 px-6 md:px-20 border-y border-slate-100'
       id='project'>
       <div className='max-w-6xl mx-auto'>
-        <div className='text-center md:text-left mb-12'>
+        <div className='flex flex-col justify-center items-center text-center md:text-left mb-12'>
           <h2 className='font-outfit font-extrabold text-3xl md:text-4xl text-textMain tracking-tight'>
             Featured Projects
           </h2>
@@ -90,7 +90,6 @@ export default function Project() {
             responsive design, DOM manipulation, and frontend architecture.
           </p>
         </div>
-
         <motion.div
           className='grid grid-cols-1 md:grid-cols-2 gap-8'
           initial='hidden'

@@ -5,7 +5,7 @@ import {
   SiReact,
   SiJavascript,
   SiHtml5,
-  SiCss3,
+  SiCss,
   SiTailwindcss,
   SiBootstrap,
   SiNodedotjs,
@@ -19,12 +19,15 @@ import {
   SiSocketdotio,
 } from "react-icons/si";
 
+import { TbBrandSocketIo } from "react-icons/tb";
+
 import {
   FaLaptopCode,
   FaServer,
   FaDatabase,
   FaCode,
   FaTools,
+  FaGithub,
 } from "react-icons/fa";
 
 import { MdOutlineWeb } from "react-icons/md";
@@ -34,17 +37,17 @@ import { HiUserGroup } from "react-icons/hi";
 export default function Skills() {
   const techStack = [
     { name: "HTML5", icon: SiHtml5, color: "#E34F26" },
-    { name: "CSS3", icon: SiCss3, color: "#1572B6" },
+    { name: "CSS3", icon: SiCss, color: "#1572B6" },
     { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
     { name: "React", icon: SiReact, color: "#61DAFB" },
     { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4" },
     { name: "Bootstrap", icon: SiBootstrap, color: "#7952B3" },
     { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
-    { name: "Express", icon: SiExpress, color: "#ffffff" },
+    { name: "Express", icon: FaServer, color: "#ffffff" },
     { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
-    { name: "Socket.IO", icon: SiSocketdotio, color: "#ffffff" },
+    { name: "Socket.IO", icon: TbBrandSocketIo, color: "#ffffff" },
     { name: "Git", icon: SiGit, color: "#F05032" },
-    { name: "GitHub", icon: SiGithub, color: "#ffffff" },
+    { name: "GitHub", icon: FaGithub     , color: "#ffffff" },
     { name: "Postman", icon: SiPostman, color: "#FF6C37" },
     { name: "Vite", icon: SiVite, color: "#646CFF" },
     { name: "Render", icon: SiRender, color: "#46E3B7" },
@@ -122,11 +125,11 @@ export default function Skills() {
   ];
   return (
     <section
-      className='bg-white py-20 px-6 md:px-20 border-b border-slate-100'
+      className=' bg-white py-20 px-6 md:px-20 border-b border-slate-100'
       id='skills'>
       {/* Header */}
-      <div className='max-w-6xl mx-auto mb-12 text-center md:text-left'>
-        <h2 className='font-outfit font-extrabold text-3xl md:text-4xl text-textMain tracking-tight'>
+      <div className='flex flex-col max-w-6xl mx-auto mb-12 justify-items-center items-center md:text-left'>
+        <h2 className='font-outfit font-extrabold text-3xl md:text-4xl text-textMain tracking-tight text-center'>
           Skills
         </h2>
         <div className='h-1 w-20 bg-accent mt-3 rounded'></div>
