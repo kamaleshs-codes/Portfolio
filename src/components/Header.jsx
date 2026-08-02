@@ -26,17 +26,20 @@ export default function Header() {
       <a
         className='font-outfit font-extrabold text-2xl tracking-tight text-white hover:opacity-90 transition-opacity'
         href='#home'>
-        Kamalesh <span className='text-accent font-black'>- Portfolio</span>
+        Kamalesh{" "}
+        <span className='text-accent hover-text-accent-light font-black'>
+          - Portfolio
+        </span>
       </a>
 
       {/* Desktop Navigation */}
       <nav className='hidden md:block'>
-        <ul className='flex items-center space-x-8 text-sm font-medium tracking-wide text-slate-300'>
+        <ul className='flex items-center space-x-8 text-sm font-medium tracking-wide text-white'>
           {navLinks.map((link) => (
             <li key={link.name}>
               <a
                 href={link.href}
-                className='hover:text-accent border-b-2 border-transparent hover:border-accent py-1.5 transition-all duration-200'>
+                className='hover-text-accent border-b-2 border-transparent hover:border-accent py-1.5 transition-all duration-200'>
                 {link.name}
               </a>
             </li>

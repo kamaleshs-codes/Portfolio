@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
-import profileimg from "../assets/profileimg.png";
+import myprofile from "../assets/myprofile.png";
 
 export default function Hero() {
   const heroContent = {
@@ -12,10 +12,10 @@ export default function Hero() {
 
     name: "Kamalesh S",
 
-    roles: ["MERN Stack Developer", "Full Stack Developer", "Web Developer"],
+    roles: ["Frontend Developer", "Web Developer", "Mern Stack Enthuaist"],
 
     description:
-      "Computer Science postgraduate and MERN Stack Developer with hands-on experience building scalable full-stack web applications using React.js, Node.js, Express.js, and MongoDB. Skilled in developing secure RESTful APIs, JWT authentication, CRUD operations, and real-time communication using Socket.IO. Passionate about building efficient, user-friendly applications while continuously exploring AI-assisted software development.",
+      "I'm a Frontend Developer with a strong foundation in the MERN stack, passionate about building modern, responsive, and user-focused web applications. I enjoy transforming ideas into intuitive digital experiences using React.js and continuously enhancing my frontend expertise while expanding my full-stack development skills. I'm currently focused on mastering modern frontend technologies and strengthening my backend knowledge to grow into a well-rounded Full-Stack Software Developer, with a long-term vision of integrating AI into impactful web applications.",
   };
 
   const buttons = [
@@ -27,12 +27,12 @@ export default function Hero() {
     {
       label: "Download Resume",
       href: "#resume",
-      className: "btn-secondary",
+      className: "btn-primary",
     },
     {
       label: "Contact Me",
       href: "#contact",
-      className: "btn-accent",
+      className: "btn-primary",
     },
   ];
 
@@ -72,10 +72,10 @@ export default function Hero() {
           transition={{ duration: 0.6 }}>
           {/* Status */}
 
-          <div className='inline-flex w-fit items-center gap-2 rounded-full border border-slate-700/50 bg-slate-800/40 px-4 py-2 backdrop-blur'>
-            <span className='h-2 w-2 rounded-full bg-sky-400 animate-pulse'></span>
+          <div className='inline-flex w-fit items-center gap-2 rounded-full border border-slate-700/50 bg-primary px-4 py-2 backdrop-blur'>
+            <span className='h-2 w-2 rounded-full bg-accent-light animate-pulse'></span>
 
-            <span className='text-xs font-semibold uppercase tracking-[0.2em] text-slate-300'>
+            <span className='text-xs font-semibold uppercase tracking-[0.2em] text-accent'>
               {heroContent.status}
             </span>
           </div>
@@ -83,11 +83,11 @@ export default function Hero() {
           {/* Heading */}
 
           <div>
-            <h1 className='font-outfit text-4xl font-extrabold leading-tight text-white md:text-6xl lg:text-7xl'>
+            <h1 className='font-outfit text-4xl font-extrabold leading-tight text-white hover-text-accent-light md:text-6xl lg:text-7xl'>
               {heroContent.greeting}
               <br />
 
-              <span className='bg-gradient-to-r from-indigo-400 to-sky-400 bg-clip-text text-transparent'>
+              <span className='bg-gradient-to-r from-indigo-400 hover-text-accent to-sky-400 bg-clip-text text-transparent'>
                 {heroContent.name}
               </span>
             </h1>
@@ -95,7 +95,7 @@ export default function Hero() {
 
           {/* Roles */}
 
-          <h2 className='text-lg font-semibold text-slate-300 md:text-2xl'>
+          <h2 className='text-lg font-semibold text-accent md:text-2xl'>
             {heroContent.roles.map((role, index) => (
               <span key={role}>
                 {role}
@@ -109,9 +109,11 @@ export default function Hero() {
 
           {/* Description */}
 
-          <p className='max-w-xl text-base leading-8 text-slate-400 md:text-lg'>
+          <p className='max-w-xl text-base leading-8 text-white md:text-lg'>
             {heroContent.description}
           </p>
+
+          <div className="text-accent">Let's Build Something Amazing Together!</div>
 
           {/* Buttons */}
 
@@ -163,7 +165,7 @@ export default function Hero() {
             <div className='absolute inset-0 rounded-3xl bg-gradient-to-r from-indigo-500/20 to-sky-500/20 blur-3xl transition-opacity duration-300 group-hover:opacity-100'></div>
 
             <motion.img
-              src={profileimg}
+              src={myprofile}
               alt='Kamalesh S'
               className='relative h-72 w-72 rounded-3xl border border-slate-800/80 object-cover shadow-2xl md:h-96 md:w-96'
               whileHover={{ scale: 1.03 }}

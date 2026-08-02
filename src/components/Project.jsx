@@ -85,7 +85,7 @@ export default function Project() {
             Featured Projects
           </h2>
           <div className='h-1 w-20 bg-accent mt-2 rounded mx-auto md:mx-0'></div>
-          <p className='pt-4 text-textMuted text-base max-w-xl font-light'>
+          <p className='pt-4 text-black max-w-xl font-light'>
             Here are some of the key web applications I've developed, showcasing
             responsive design, DOM manipulation, and frontend architecture.
           </p>

@@ -67,7 +67,7 @@ export default function Contact() {
 
   return (
     <section
-      className='bg-primary text-white py-20 px-6 md:px-20 relative overflow-hidden'
+      className='relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 px-6 py-20 md:px-20 md:py-28'
       id='contact'>
       {/* Background visual element */}
       <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl pointer-events-none'></div>
@@ -89,11 +89,11 @@ export default function Contact() {
           {contactDetails.map((detail, idx) => (
             <div
               key={idx}
-              className='bg-slate-900/60 border border-slate-800 p-6 rounded-2xl hover:border-slate-700 hover:bg-slate-900 transition-all duration-300'>
+              className='bg-primary border border-slate-800 p-6 rounded-2xl hover:border-slate-700 hover:bg-slate-900 transition-all duration-300'>
               <div className='bg-slate-800/80 w-12 h-12 rounded-xl flex items-center justify-center mb-4 border border-slate-750'>
                 {detail.icon}
               </div>
-              <h3 className='text-sm font-semibold text-slate-400 uppercase tracking-wider mb-1'>
+              <h3 className='text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1'>
                 {detail.label}
               </h3>
               {detail.href ? (

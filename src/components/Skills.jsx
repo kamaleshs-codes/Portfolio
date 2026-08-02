@@ -128,12 +128,12 @@ export default function Skills() {
       className=' bg-white py-20 px-6 md:px-20 border-b border-slate-100'
       id='skills'>
       {/* Header */}
-      <div className='flex flex-col max-w-6xl mx-auto mb-12 justify-items-center items-center md:text-left'>
-        <h2 className='font-outfit font-extrabold text-3xl md:text-4xl text-textMain tracking-tight text-center'>
+      <div className='flex flex-col max-w-6xl mx-auto mb-4 justify-items-center items-center md:text-left'>
+        <h2 className='font-outfit font-extrabold text-3xl md:text-4xl text-primary tracking-tight text-center'>
           Skills
         </h2>
-        <div className='h-1 w-20 bg-accent mt-3 rounded'></div>
-        <p className='mt-4 text-textMuted text-base max-w-3xl font-light'>
+        <div className='h-1 w-20 bg-primary mt-3 rounded'></div>
+        <p className='mt-6 text-black max-w-3xl font-light'>
           A snapshot of the technologies, tools, and soft skills I use to build
           modern, responsive web applications and collaborate effectively.
         </p>
@@ -157,7 +157,7 @@ export default function Skills() {
       </div>
 
       {/* Skills Groups  */}
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-3'>
         {skillGroups.map((group, idx) => {
           const Icon = group.icon;
           return (
@@ -184,7 +184,7 @@ export default function Skills() {
                 {group.skills.map((skill) => (
                   <span
                     key={skill}
-                    className='px-3 py-1.5 text-sm rounded-lg bg-white border border-slate-200 text-textMain shadow-sm transition-all duration-200 hover:border-accent hover:text-accent hover:shadow-md'>
+                    className='px-3 py-1.5 text-sm rounded-lg bg-surface-secondary border border-slate-200 text-accent shadow-sm transition-all duration-200 hover:border-accent hover-text-accent-light cursor-pointer hover:shadow-md'>
                     {skill}
                   </span>
                 ))}

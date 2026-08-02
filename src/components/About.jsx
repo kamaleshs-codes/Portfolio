@@ -13,7 +13,7 @@ export default function About() {
   const aboutContent = {
     title: "About Me",
 
-    subtitle: "Get to know me better",
+    subtitle: "GET TO KNOW ME BETTER:",
 
     paragraphs: [
       "I'm a Computer Science postgraduate and MERN Stack Developer with hands-on experience building scalable web applications.",
@@ -124,13 +124,13 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.08 }}>
           {/* Section Heading */}
-          <h2 className='font-outfit font-extrabold text-3xl text-textMain'>
+          <h2 className='font-outfit font-extrabold text-3xl text-primary'>
             {aboutContent.title}
           </h2>
 
-          <div className='h-1 w-16 bg-accent rounded mt-3 mb-6'></div>
+          <div className='h-1 w-16 bg-primary rounded mt-3 mb-6'></div>
 
-          <h3 className='text-2xl font-semibold mb-6'>
+          <h3 className='text-2xl font-semibold mb-3'>
             {aboutContent.subtitle}
           </h3>
 
@@ -140,7 +140,7 @@ export default function About() {
               <p key={index}>
                 {index === 0 ? (
                   <>
-                    <span className='text-accent font-semibold'>
+                    <span className='text-primary font-semibold'>
                       I'm Kamalesh S
                     </span>
                     {paragraph.replace("I'm", ",")}
@@ -156,7 +156,7 @@ export default function About() {
           <ul className='grid grid-cols-1 sm:grid-cols-2 gap-3'>
             {technicalHighlights.map((skill) => (
               <li key={skill} className='flex items-start gap-2 text-textMain'>
-                <span className='text-accent font-bold mt-0.5'>✔</span>
+                <span className='text-primary font-bold mt-0.5'>✔</span>
 
                 <span>{skill}</span>
               </li>

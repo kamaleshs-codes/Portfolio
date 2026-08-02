@@ -30,7 +30,7 @@ export default function Education() {
             Academic Background
           </h2>
           <div className='h-1 w-20 bg-accent mt-2 rounded mx-auto'></div>
-          <p className='pt-4 text-textMuted text-base max-w-xl mx-auto font-light'>
+          <p className='pt-4 text-black max-w-xl mx-auto font-light'>
             My academic path in Computer Science has provided a strong
             theoretical foundation to back my practical development skills.
           </p>

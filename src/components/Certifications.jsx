@@ -128,7 +128,7 @@ export default function Certifications() {
             Certifications & Training
           </h2>
           <div className='h-1 w-20 bg-accent mt-2 rounded mx-auto'></div>
-          <p className='pt-4 text-textMuted text-base max-w-xl mx-auto font-light'>
+          <p className='pt-4 text-black text-base max-w-xl mx-auto font-light'>
             Verified external programs and coursework demonstrating specialized
             skills and continuous growth.
           </p>

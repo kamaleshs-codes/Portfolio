@@ -18,22 +18,124 @@ body {
   --radius-lg: 24px;
 
   /* Brand - Sophisticated Indigo & Teal Accent */
-  --primary: #6366f1; /* Modern Indigo */
+  --primary: #01024a; /* Modern Indigo */
   --primary-hover: #4f46e5; /* Deeper Premium Indigo */
-  --accent: #0ea5e9; /* Vibrant Sky Blue */
-  --accent-hover: #0284c7; /* Richer Deep Sky Blue */
+  --accent: #00ceb6; /* Vibrant Sky Blue */
+  --accent-light: #03ff20; /* Richer Deep Sky Blue */
 
   /* Backgrounds - Professional Dark Slate Theme */
-  --bg: #0f172a; /* Deep Slate / Navy */
-  --surface: #1e293b; /* Sleek Card Background */
-  --surface-secondary: #334155; /* Section dividers / Muted surfaces */
+  --bg: #1a2e5e; /* Deep Slate / Navy */
+  --surface: #8cd3f9; /* Sleek Card Background */
+  --surface-secondary: #23133b; /* Section dividers / Muted surfaces */
 
   /* Text - High Contrast & Clean Hierarchy */
-  --text-main: #f8fafc; /* Off-white for crisp readability */
-  --text-muted: #94a3b8; /* Soft Slate for descriptions */
+  --main: #f8fafc; /* Off-white for crisp readability */
+  --muted: #94a3b8; /* Soft Slate for descriptions */
 
   /* Border */
   --border: #334155;
+}
+
+/* ==========================================
+   Theme Utility Classes
+========================================== */
+
+/* Backgrounds */
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-primary-hover {
+  background-color: var(--primary-hover);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.bg-accent-light {
+  background-color: var(--accent-light);
+}
+
+.bg-surface {
+  background-color: var(--surface);
+}
+
+.bg-surface-secondary {
+  background-color: var(--surface-secondary);
+}
+
+.bg-background {
+  background-color: var(--bg);
+}
+
+/* Text */
+.text-primary {
+  color: var(--primary);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.text-accent-light {
+  color: var(--accent-light);
+}
+
+.text-main {
+  color: var(--main);
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+/* Borders */
+.border-primary {
+  border-color: var(--primary);
+}
+
+.border-accent {
+  border-color: var(--accent);
+}
+
+.border-surface {
+  border-color: var(--surface);
+}
+
+.border-theme {
+  border-color: var(--border);
+}
+
+/* Hover Utilities */
+.hover-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.hover-accent:hover {
+  background-color: var(--accent-hover);
+}
+
+/* Text Hover Utilities */
+.hover-text-accent:hover {
+  color: var(--accent);
+}
+
+.hover-text-accent-light:hover {
+  color: var(--accent-light);
+}
+
+.hover-text-primary:hover {
+  color: var(--primary-hover);
+}
+
+/* Shadows */
+.shadow-primary {
+  box-shadow: 0 10px 30px rgba(1, 2, 74, 0.35);
+}
+
+.shadow-accent {
+  box-shadow: 0 10px 30px rgba(6, 131, 117, 0.3);
 }
 
 /* Custom Scrollbar */
@@ -41,15 +143,15 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: #15306a;
 }
 ::-webkit-scrollbar-thumb {
-  background: #334155;
+  background: #897e7e;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #475569;
+  background: #ffffff;
 }
 
 /* Premium Buttons */
@@ -75,7 +177,7 @@ body {
 
 /* Glassmorphism Header */
 .glass-header {
-  @apply sticky top-0 z-50 backdrop-blur-md bg-slate-900/80 border-b border-slate-800/60;
+  @apply sticky top-0 z-50 backdrop-blur-md bg-blue-950 border-b border-slate-800/60;
 }
 
 /* Mobile Nav Link */

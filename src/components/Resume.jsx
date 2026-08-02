@@ -27,7 +27,7 @@ export default function Resume() {
             <div className='h-1 w-20 bg-accent mt-2 rounded'></div>
           </div>
 
-          <p className='text-textMuted text-base md:text-lg leading-relaxed font-light'>
+          <p className='text-black md:text-lg leading-relaxed font-light'>
             Interested in working together? You can view my complete
             professional profile by downloading or reading my resume. It details
             my academic credentials, software skill levels, and recent projects.
