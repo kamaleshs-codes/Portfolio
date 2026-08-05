@@ -8,7 +8,7 @@ export default function Certifications() {
       type: "Web Development Bootcamp",
       icon: (
         <svg
-          className='w-8 h-8 text-accent'
+          className='w-8 h-8 text-primary'
           fill='none'
           stroke='currentColor'
           viewBox='0 0 24 24'>
@@ -27,7 +27,7 @@ export default function Certifications() {
       type: "Frontend Essentials",
       icon: (
         <svg
-          className='w-8 h-8 text-accent'
+          className='w-8 h-8 text-primary'
           fill='none'
           stroke='currentColor'
           viewBox='0 0 24 24'>
@@ -46,7 +46,7 @@ export default function Certifications() {
       type: "Full Stack Training",
       icon: (
         <svg
-          className='w-8 h-8 text-accent'
+          className='w-8 h-8 text-primary'
           fill='none'
           stroke='currentColor'
           viewBox='0 0 24 24'>
@@ -65,7 +65,7 @@ export default function Certifications() {
       type: "Object Oriented Programming",
       icon: (
         <svg
-          className='w-8 h-8 text-accent'
+          className='w-8 h-8 text-primary'
           fill='none'
           stroke='currentColor'
           viewBox='0 0 24 24'>
@@ -84,7 +84,7 @@ export default function Certifications() {
       type: "Python Programming",
       icon: (
         <svg
-          className='w-8 h-8 text-accent'
+          className='w-8 h-8 text-primary'
           fill='none'
           stroke='currentColor'
           viewBox='0 0 24 24'>
@@ -103,7 +103,7 @@ export default function Certifications() {
       type: "Data Science Fundamentals",
       icon: (
         <svg
-          className='w-8 h-8 text-accent'
+          className='w-8 h-8 text-primary'
           fill='none'
           stroke='currentColor'
           viewBox='0 0 24 24'>
@@ -120,15 +120,15 @@ export default function Certifications() {
 
   return (
     <section
-      className='bg-white py-20 px-6 md:px-20 border-b border-slate-100'
+      className='bg-secondary py-20 px-6 md:px-20 border-b border-slate-100'
       id='certifications'>
       <div className='max-w-6xl mx-auto'>
         <div className='text-center mb-16'>
-          <h2 className='font-outfit font-extrabold text-3xl md:text-4xl text-textMain tracking-tight'>
+          <h2 className='font-outfit font-extrabold text-3xl md:text-4xl text-primary tracking-tight'>
             Certifications & Training
           </h2>
-          <div className='h-1 w-20 bg-accent mt-2 rounded mx-auto'></div>
-          <p className='pt-4 text-black text-base max-w-xl mx-auto font-light'>
+          <div className='h-1 w-20 bg-surface mt-2 rounded mx-auto'></div>
+          <p className='pt-4 text-sub-main text-base max-w-xl mx-auto'>
             Verified external programs and coursework demonstrating specialized
             skills and continuous growth.
           </p>
@@ -140,23 +140,23 @@ export default function Certifications() {
               key={idx}
               className='bg-surface border border-slate-100 p-6 rounded-2xl hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center hover:-translate-y-1'>
               {/* Badge Icon */}
-              <div className='w-16 h-16 bg-white border border-slate-150 rounded-2xl flex items-center justify-center shadow-sm mb-6'>
+              <div className='w-16 h-16 bg-accent-main border border-slate-150 rounded-2xl flex items-center justify-center shadow-sm mb-6'>
                 {cert.icon}
               </div>
 
               {/* Tag Category */}
-              <span className='text-[10px] font-bold tracking-wider uppercase text-accent bg-accent/5 px-2.5 py-1 rounded-full mb-3'>
+              <span className='text-accent-main font-bold tracking-wider uppercase bg-accent/5 px-2.5 py-1 rounded-full mb-3'>
                 {cert.type}
               </span>
 
               {/* Title & Issuer */}
-              <h3 className='font-outfit font-bold text-textMain text-base mb-2 flex-grow'>
+              <h3 className='font-outfit font-bold text-main text-base mb-2 flex-grow'>
                 {cert.title}
               </h3>
 
-              <p className='text-xs text-textMuted leading-relaxed border-t border-slate-200/50 w-full pt-4 mt-2'>
+              <p className='text-xs text-accent-main leading-relaxed border-t border-slate-200/50 w-full pt-4 mt-2'>
                 Issuer:{" "}
-                <span className='font-semibold text-textMain'>
+                <span className='font-semibold text-accent-light'>
                   {cert.issuer}
                 </span>
               </p>

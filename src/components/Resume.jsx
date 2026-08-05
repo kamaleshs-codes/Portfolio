@@ -3,7 +3,7 @@ import ResumeImg from "../assets/resume.jpg";
 export default function Resume() {
   return (
     <section
-      className='bg-white py-20 px-6 md:px-20 border-b border-slate-100'
+      className='bg-primary py-20 px-6 md:px-20 border-b border-slate-100'
       id='resume'>
       <div className='max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12'>
         {/* Left Side: Mockup Image */}
@@ -21,13 +21,13 @@ export default function Resume() {
         {/* Right Side: CTA details */}
         <div className='w-full md:w-1/2 flex flex-col space-y-6'>
           <div>
-            <h2 className='font-outfit font-extrabold text-3xl md:text-4xl text-textMain tracking-tight'>
+            <h2 className='font-outfit font-extrabold text-3xl md:text-4xl text-primary tracking-tight'>
               Resume / Curriculum Vitae
             </h2>
-            <div className='h-1 w-20 bg-accent mt-2 rounded'></div>
+            <div className='h-1 w-20 bg-surface mt-2 rounded'></div>
           </div>
 
-          <p className='text-black md:text-lg leading-relaxed font-light'>
+          <p className='text-sub-main md:text-lg leading-relaxed'>
             Interested in working together? You can view my complete
             professional profile by downloading or reading my resume. It details
             my academic credentials, software skill levels, and recent projects.
@@ -61,7 +61,7 @@ export default function Resume() {
               href='https://drive.google.com/file/d/1bZnwNV6dILZ8JwmWuJ3fXhTNM3qG_WNw/view'
               target='_blank'
               rel='noopener noreferrer'
-              className='btn-resume text-center flex items-center justify-center gap-2'>
+              className='btn-secondary text-center flex items-center justify-center gap-2'>
               <svg
                 className='w-5 h-5'
                 fill='none'

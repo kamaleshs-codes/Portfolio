@@ -123,6 +123,10 @@ body {
   background-color: var(--accent-hover);
 }
 
+.hover-bg-main{
+  background-color: var(--bg-main);
+}
+
 /* Text Hover Utilities */
 .hover-text-accent-main:hover {
   color: var(--accent-main);
@@ -167,19 +171,14 @@ body {
   @apply bg-indigo-600 text-white font-semibold px-6 py-2.5 rounded-xl transition-all duration-300 shadow-md shadow-indigo-600/10 hover:bg-indigo-500 hover:shadow-xl hover:shadow-indigo-500/20 hover:-translate-y-0.5;
 }
 
-.btn-secondary {
-  /* Modern clean outline-style hover that fills into a sleek slate gray */
-  @apply bg-transparent border border-slate-700 text-slate-200 font-semibold px-6 py-2.5 rounded-xl transition-all duration-300 hover:bg-slate-800 hover:border-slate-600 hover:text-white;
-}
-
 .btn-accent {
   /* Hovers to a bright, energetic sky blue with a corresponding accent glow shadow */
-  @apply bg-sky-800 text-white font-semibold px-6 py-2.5 rounded-xl transition-all duration-300 shadow-md shadow-sky-500/10 hover:bg-sky-400 hover:shadow-xl hover:shadow-sky-400/20 hover:-translate-y-0.5;
+  @apply bg-sky-600 text-main font-semibold px-6 py-2.5 rounded-xl transition-all duration-300 shadow-md shadow-sky-500/10 hover:bg-blue-500 hover:shadow-xl hover:shadow-sky-400/20 hover:-translate-y-0.5;
 }
 
-.btn-resume {
+.btn-secondary {
   /* Clean interactive transition for your resume file action */
-  @apply bg-white border border-indigo-500 text-indigo-400 font-semibold px-6 py-2.5 rounded-xl transition-all duration-300 hover:bg-indigo-500/10 hover:border-indigo-400 hover:text-indigo-300;
+  @apply bg-white border border-indigo-500 text-indigo-500 font-semibold px-6 py-2.5 rounded-xl transition-all duration-300 hover:bg-indigo-500 hover:border-indigo-400 hover:text-white;
 }
 
 /* Glassmorphism Header */
