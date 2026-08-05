@@ -27,7 +27,7 @@ export default function Header() {
         className='font-outfit font-extrabold text-2xl tracking-tight text-white hover:opacity-90 transition-opacity'
         href='#home'>
         Kamalesh{" "}
-        <span className='text-accent hover-text-accent-light font-black'>
+        <span className='text-accent-main hover-text-accent-light font-black'>
           - Portfolio
         </span>
       </a>
@@ -39,7 +39,7 @@ export default function Header() {
             <li key={link.name}>
               <a
                 href={link.href}
-                className='hover-text-accent border-b-2 border-transparent hover:border-accent py-1.5 transition-all duration-200'>
+                className='hover-text-accent-main border-b-2 border-transparent hover:border-accent py-1.5 transition-all duration-200'>
                 {link.name}
               </a>
             </li>

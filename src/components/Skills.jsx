@@ -125,15 +125,15 @@ export default function Skills() {
   ];
   return (
     <section
-      className=' bg-white py-20 px-6 md:px-20 border-b border-slate-100'
+      className=' bg-secondary py-20 px-6 md:px-20 border-b border-slate-200'
       id='skills'>
       {/* Header */}
       <div className='flex flex-col max-w-6xl mx-auto mb-4 justify-items-center items-center md:text-left'>
         <h2 className='font-outfit font-extrabold text-3xl md:text-4xl text-primary tracking-tight text-center'>
           Skills
         </h2>
-        <div className='h-1 w-20 bg-primary mt-3 rounded'></div>
-        <p className='mt-6 text-black max-w-3xl font-light'>
+        <div className='h-1 w-20 bg-surface mt-3 rounded'></div>
+        <p className='mt-6 text-sub-main max-w-3xl'>
           A snapshot of the technologies, tools, and soft skills I use to build
           modern, responsive web applications and collaborate effectively.
         </p>
@@ -170,11 +170,11 @@ export default function Skills() {
               viewport={{ once: true }}>
               {/* Card Header */}
               <div className='flex items-center gap-3 mb-5'>
-                <div className='bg-white border border-slate-200/60 p-3 rounded-xl shadow-sm'>
-                  <Icon className='w-6 h-6 text-accent' />
+                <div className='bg-accent-main border border-slate-200/60 p-3 rounded-xl shadow-sm'>
+                  <Icon className='w-6 h-6 text-primary' />
                 </div>
 
-                <h3 className='font-outfit font-bold text-lg text-textMain'>
+                <h3 className='font-outfit font-bold text-lg text-accent-main'>
                   {group.category}
                 </h3>
               </div>
@@ -184,7 +184,7 @@ export default function Skills() {
                 {group.skills.map((skill) => (
                   <span
                     key={skill}
-                    className='px-3 py-1.5 text-sm rounded-lg bg-surface-secondary border border-slate-200 text-accent shadow-sm transition-all duration-200 hover:border-accent hover-text-accent-light cursor-pointer hover:shadow-md'>
+                    className='px-3 py-1.5 text-sm rounded-lg bg-surface-secondary border border-slate-200 text-accent-light shadow-sm transition-all duration-200 hover:border-accent hover-text-accent-main cursor-pointer hover:shadow-md'>
                     {skill}
                   </span>
                 ))}

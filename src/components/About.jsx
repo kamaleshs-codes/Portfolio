@@ -71,7 +71,7 @@ export default function About() {
   ];
 
   return (
-    <section id='about' className='py-20 px-6 md:px-20 bg-surface'>
+    <section id='about' className='py-20 px-6 md:px-20 bg-primary'>
       <div className='max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-start'>
         {/* Left Column */}
         <motion.div
@@ -86,7 +86,7 @@ export default function About() {
             className='w-44 h-44 md:w-full md:h-56 rounded-2xl object-cover border border-slate-100 shadow-md'
           />
 
-          <div className='w-full bg-white rounded-2xl shadow-md border border-slate-200 p-6'>
+          <div className='w-full bg-surface rounded-2xl shadow-md border border-slate-200 p-6'>
             {personalInfo.map((info, index) => {
               const Icon = info.icon;
 
@@ -98,16 +98,16 @@ export default function About() {
                       ? "border-b border-slate-200"
                       : ""
                   }`}>
-                  <div className='mt-1 text-accent'>
+                  <div className='mt-1 text-accent-main'>
                     <Icon size={18} />
                   </div>
 
                   <div className='flex-1'>
-                    <p className='text-sm text-slate-500 font-medium'>
+                    <p className='text-sm text-accent-main font-medium'>
                       {info.label}
                     </p>
 
-                    <p className='mt-1 font-semibold text-textMain break-words'>
+                    <p className='mt-1 font-semibold text-accent-light break-words'>
                       {info.value}
                     </p>
                   </div>
@@ -128,14 +128,14 @@ export default function About() {
             {aboutContent.title}
           </h2>
 
-          <div className='h-1 w-16 bg-primary rounded mt-3 mb-6'></div>
+          <div className='h-1 w-16 bg-surface rounded mt-3 mb-6'></div>
 
-          <h3 className='text-2xl font-semibold mb-3'>
+          <h3 className='text-2xl font-semibold mb-3 text-accent-secondary'>
             {aboutContent.subtitle}
           </h3>
 
           {/* About Description */}
-          <div className='space-y-5 text-slate-800 leading-relaxed mb-6'>
+          <div className='space-y-5 text-sub-main leading-relaxed mb-6'>
             {aboutContent.paragraphs.map((paragraph, index) => (
               <p key={index}>
                 {index === 0 ? (
@@ -155,7 +155,7 @@ export default function About() {
           {/* Technical Highlights */}
           <ul className='grid grid-cols-1 sm:grid-cols-2 gap-3'>
             {technicalHighlights.map((skill) => (
-              <li key={skill} className='flex items-start gap-2 text-textMain'>
+              <li key={skill} className='flex items-start font-semibold gap-2 text-accent-secondary'>
                 <span className='text-primary font-bold mt-0.5'>✔</span>
 
                 <span>{skill}</span>

@@ -57,7 +57,7 @@ export default function Hero() {
   return (
     <section
       id='home'
-      className='relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 px-6 py-20 md:px-20 md:py-28'>
+      className='relative overflow-hidden bg-main px-6 py-20 md:px-20 md:py-28'>
       {/* Background Effects - Cleaned up to match new theme */}
       <div className='absolute -top-24 -right-24 h-80 w-80 rounded-full bg-indigo-500/10 blur-3xl'></div>
 
@@ -72,10 +72,10 @@ export default function Hero() {
           transition={{ duration: 0.6 }}>
           {/* Status */}
 
-          <div className='inline-flex w-fit items-center gap-2 rounded-full border border-slate-700/50 bg-primary px-4 py-2 backdrop-blur'>
+          <div className='inline-flex w-fit items-center gap-2 rounded-full border border-slate-700/50 bg-surface px-4 py-2 backdrop-blur'>
             <span className='h-2 w-2 rounded-full bg-accent-light animate-pulse'></span>
 
-            <span className='text-xs font-semibold uppercase tracking-[0.2em] text-accent'>
+            <span className='text-xs font-semibold uppercase tracking-[0.2em] text-accent-main'>
               {heroContent.status}
             </span>
           </div>
@@ -83,11 +83,11 @@ export default function Hero() {
           {/* Heading */}
 
           <div>
-            <h1 className='font-outfit text-4xl font-extrabold leading-tight text-white hover-text-accent-light md:text-6xl lg:text-7xl'>
+            <h1 className='font-outfit text-4xl font-extrabold leading-tight text-main hover-text-accent-light md:text-6xl lg:text-7xl'>
               {heroContent.greeting}
               <br />
 
-              <span className='bg-gradient-to-r from-indigo-400 hover-text-accent to-sky-400 bg-clip-text text-transparent'>
+              <span className='bg-gradient-to-r from-indigo-400 hover-text-accent-main to-sky-400 bg-clip-text text-transparent'>
                 {heroContent.name}
               </span>
             </h1>
@@ -95,7 +95,7 @@ export default function Hero() {
 
           {/* Roles */}
 
-          <h2 className='text-lg font-semibold text-accent md:text-2xl'>
+          <h2 className='text-lg font-semibold text-accent-main md:text-2xl'>
             {heroContent.roles.map((role, index) => (
               <span key={role}>
                 {role}
@@ -109,11 +109,11 @@ export default function Hero() {
 
           {/* Description */}
 
-          <p className='max-w-xl text-base leading-8 text-white md:text-lg'>
+          <p className='max-w-xl text-base leading-8 text-main md:text-lg'>
             {heroContent.description}
           </p>
 
-          <div className="text-accent">Let's Build Something Amazing Together!</div>
+          <div className="text-accent-main">Let's Build Something Amazing Together!</div>
 
           {/* Buttons */}
 
@@ -146,7 +146,7 @@ export default function Hero() {
                       : undefined
                   }
                   aria-label={social.label}
-                  className='text-slate-400 transition-all duration-300 hover:-translate-y-1 hover:text-sky-400'>
+                  className='bg-accent-main text-primary rounded p-1 transition-all duration-300 hover:-translate-y-1'>
                   <Icon size={27} />
                 </a>
               );

@@ -13,7 +13,7 @@ export default function Internship() {
       ],
       icon: (
         <svg
-          className='w-5 h-5 text-textMuted mr-2'
+          className='w-5 h-5 text-accent-main mr-2'
           fill='none'
           stroke='currentColor'
           viewBox='0 0 24 24'>
@@ -37,7 +37,7 @@ export default function Internship() {
       ],
       icon: (
         <svg
-          className='w-5 h-5 text-textMuted mr-2'
+          className='w-5 h-5 text-accent-main mr-2'
           fill='none'
           stroke='currentColor'
           viewBox='0 0 24 24'>
@@ -61,7 +61,7 @@ export default function Internship() {
       ],
       icon: (
         <svg
-          className='w-5 h-5 text-textMuted mr-2'
+          className='w-5 h-5 text-accent-main mr-2'
           fill='none'
           stroke='currentColor'
           viewBox='0 0 24 24'>
@@ -78,15 +78,15 @@ export default function Internship() {
 
   return (
     <section
-      className='bg-white py-20 px-6 md:px-20 border-b border-slate-100'
+      className='bg-secondary py-20 px-6 md:px-20 border-b border-slate-100'
       id='internship'>
       <div className='max-w-4xl mx-auto'>
         <div className='text-center mb-16'>
-          <h2 className='font-outfit font-extrabold text-3xl md:text-4xl text-textMain tracking-tight'>
+          <h2 className='font-outfit font-extrabold text-3xl md:text-4xl text-primary tracking-tight'>
             Internship & Practical Training
           </h2>
-          <div className='h-1 w-20 bg-accent mt-2 rounded mx-auto'></div>
-          <p className='pt-4 text-black max-w-xl mx-auto font-light'>
+          <div className='h-1 w-20 bg-surface mt-2 rounded mx-auto'></div>
+          <p className='pt-4 text-sub-main max-w-xl mx-auto'>
             My practical training and industry internship experiences applying
             analytics, programming, and software concepts.
           </p>
@@ -103,21 +103,22 @@ export default function Internship() {
               <div className='bg-surface p-6 md:p-8 rounded-2xl border border-slate-100 hover:border-slate-200/80 shadow-sm hover:shadow-md transition-all duration-300'>
                 <div className='flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4'>
                   <div>
+                    
+                    <h3 className='font-outfit font-extrabold text-xl md:text-2xl text-accent-main mt-3 leading-tight'>
+                      {item.role}
+                    </h3>
                     <span className='text-xs font-semibold uppercase tracking-wider text-accent bg-accent/5 px-2.5 py-1 rounded-full'>
                       {item.period}
                     </span>
-                    <h3 className='font-outfit font-extrabold text-xl md:text-2xl text-textMain mt-3 leading-tight'>
-                      {item.role}
-                    </h3>
                   </div>
                   <div className='flex items-center space-x-3'>
-                    <span className='text-sm font-bold bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-lg'>
+                    <span className='btn-primary px-3 py-1'>
                       {item.type}
                     </span>
                   </div>
                 </div>
 
-                <h4 className='font-semibold text-textMain/90 text-sm md:text-base mb-4 flex items-center'>
+                <h4 className='font-semibold text-main text-sm md:text-base mb-4 flex items-center'>
                   {item.icon}
                   {item.organization}
                 </h4>
@@ -126,7 +127,7 @@ export default function Internship() {
                   {item.bullets.map((bullet, bIdx) => (
                     <li
                       key={bIdx}
-                      className='text-sm text-textMuted flex items-start space-x-2'>
+                      className='text-sm text-accent-light flex items-start space-x-2'>
                       <span className='text-accent mt-1.5 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0'></span>
                       <span className='font-light'>{bullet}</span>
                     </li>
