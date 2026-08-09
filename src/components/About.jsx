@@ -8,6 +8,7 @@ import {
   FaEnvelope,
   FaLanguage,
 } from "react-icons/fa";
+import { Card } from "./Card";
 
 export default function About() {
   const aboutContent = {
@@ -85,8 +86,8 @@ export default function About() {
             alt='Profile'
             className='w-44 h-44 md:w-full md:h-56 rounded-2xl object-cover border border-slate-100 shadow-md'
           />
-
-          <div className='w-full bg-surface rounded-2xl shadow-md border border-slate-200 p-6'>
+          {/* Card  */}
+          <Card>
             {personalInfo.map((info, index) => {
               const Icon = info.icon;
 
@@ -114,7 +115,7 @@ export default function About() {
                 </div>
               );
             })}
-          </div>
+          </Card>
         </motion.div>
 
         {/* Right Column */}
@@ -155,7 +156,9 @@ export default function About() {
           {/* Technical Highlights */}
           <ul className='grid grid-cols-1 sm:grid-cols-2 gap-3'>
             {technicalHighlights.map((skill) => (
-              <li key={skill} className='flex items-start font-semibold gap-2 text-accent-secondary'>
+              <li
+                key={skill}
+                className='flex items-start font-semibold gap-2 text-accent-secondary'>
                 <span className='text-primary font-bold mt-0.5'>✔</span>
 
                 <span>{skill}</span>

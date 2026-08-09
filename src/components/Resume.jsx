@@ -36,7 +36,7 @@ export default function Resume() {
           <div className='flex flex-wrap gap-4 pt-2'>
             {/* Download Resume */}
             <a
-              href='https://drive.google.com/uc?export=download&id=1bZnwNV6dILZ8JwmWuJ3fXhTNM3qG_WNw'
+              href='https://drive.google.com/uc?export=download&id=1vTyPRUaqF4OqTNv765W2KoAQt-nIEFrQ'
               target='_blank'
               rel='noopener noreferrer'
               className='btn-accent text-center shadow-lg shadow-accent/20 flex items-center justify-center gap-2'>
@@ -58,7 +58,7 @@ export default function Resume() {
 
             {/* View Resume */}
             <a
-              href='https://drive.google.com/file/d/1bZnwNV6dILZ8JwmWuJ3fXhTNM3qG_WNw/view'
+              href='https://drive.google.com/file/d/1vTyPRUaqF4OqTNv765W2KoAQt-nIEFrQ/view'
               target='_blank'
               rel='noopener noreferrer'
               className='btn-secondary text-center flex items-center justify-center gap-2'>
