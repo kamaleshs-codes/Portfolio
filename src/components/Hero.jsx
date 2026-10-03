@@ -4,6 +4,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 import myprofile from "../assets/myprofile.png";
+import TextReveal from "./animations/TextReveal";
 
 export default function Hero() {
   const heroContent = {
@@ -13,6 +14,7 @@ export default function Hero() {
     roles: ["Frontend Developer", "Web Developer", "MERN Stack Developer"],
     description:
       "Frontend & Web Developer experienced in building responsive web applications using React.js, JavaScript, TypeScript, and modern web technologies. Skilled in reusable React components, routing, state management, REST APIs, and MERN Stack development.",
+    cta: "Let’s Build Something Great Together!",
   };
 
   const [displayedName, setDisplayedName] = useState("");
@@ -122,7 +124,7 @@ export default function Hero() {
 
       {/* My Profile section  */}
       <div className='relative z-10 mx-auto flex max-w-7xl flex-col-reverse items-center justify-between gap-16 md:flex-row mt-7'>
-        {/* left  */}
+        {/* left side  */}
         <motion.div
           className='flex w-full flex-col justify-center md:w-1/2'
           initial={{ opacity: 0, y: 15 }}
@@ -130,33 +132,36 @@ export default function Hero() {
           transition={{ duration: 0.6 }}>
           {/* Status */}
           <motion.div
-            className={`inline-flex w-fit items-center gap-2 rounded-full border border-slate-700/50 px-4 py-2 backdrop-blur ${
-              statusStyle ? "bg-hero-status" : "bg-surface"
-            }`}
+            className='inline-flex w-fit items-center gap-2 rounded-full border border-slate-700/50 px-4 py-2 backdrop-blur'
             animate={{
-              backgroundColor: statusStyle
-                ? "var(--bg-hero-status)"
-                : "var(--bg-surface)",
+              backgroundColor: statusStyle ? "#090036" : "#2c0023",
             }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}>
+            transition={{
+              duration: 1,
+              ease: "easeInOut",
+            }}>
+            {/* Status Dot */}
             <motion.span
               className='h-2 w-2 rounded-full animate-pulse'
               animate={{
-                backgroundColor: statusStyle
-                  ? "var(--accent-main)"
-                  : "var(--accent-light)",
+                backgroundColor: statusStyle ? "#00ffe1" : "#00d527",
               }}
-              transition={{ duration: 0.8, ease: "easeInOut" }}
+              transition={{
+                duration: 1,
+                ease: "easeInOut",
+              }}
             />
 
+            {/* Status Text */}
             <motion.span
               className='text-xs font-semibold uppercase tracking-[0.2em]'
               animate={{
-                color: statusStyle
-                  ? "var(--accent-light)"
-                  : "var(--accent-main)",
+                color: statusStyle ? "#00d527" : "#00ffe1",
               }}
-              transition={{ duration: 0.8, ease: "easeInOut" }}>
+              transition={{
+                duration: 1,
+                ease: "easeInOut",
+              }}>
               {heroContent.status}
             </motion.span>
           </motion.div>
@@ -180,14 +185,14 @@ export default function Hero() {
           </div>
 
           {/* Description */}
-          <p className='mt-4 max-w-xl text-base leading-8 text-main md:text-lg'>
-            {heroContent.description}
-          </p>
+          <TextReveal delay={0.2}>
+            <p className='mt-4 max-w-xl text-base leading-8 text-main md:text-lg'>
+              {heroContent.description}
+            </p>
 
-          {/* CTA */}
-          <div className='mt-4 text-accent-main'>
-            Let's Build Something Amazing Together!
-          </div>
+            {/* CTA */}
+            <div className='mt-4 text-accent-main'>{heroContent.cta}</div>
+          </TextReveal>
 
           {/* Buttons */}
           <div className='mt-5 flex flex-wrap gap-4'>
@@ -229,13 +234,12 @@ export default function Hero() {
         {/* Right */}
 
         <motion.div
-          className='flex w-full justify-center md:w-1/2 md:justify-end'
+          className='flex w-full justify-center md:w-1/2 md:justify-center'
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}>
           <div className='group relative'>
             <div className='absolute inset-0 rounded-3xl bg-gradient-to-r from-indigo-500/20 to-sky-500/20 blur-3xl transition-opacity duration-300 group-hover:opacity-100'></div>
-
             <motion.img
               src={myprofile}
               alt='Kamalesh S'
