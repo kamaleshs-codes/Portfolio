@@ -75,6 +75,7 @@ export default function About() {
     <section id='about' className='py-20 px-6 md:px-20 bg-primary'>
       <div className='max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-start'>
         {/* Left Column */}
+        {/* Left Column */}
         <motion.div
           className='col-span-1 flex flex-col items-center md:items-start space-y-6'
           initial={{ opacity: 0, x: -12 }}
@@ -83,10 +84,11 @@ export default function About() {
           {/* Profile Image */}
           <img
             src={ProfileImg}
-            alt='Profile'
-            className='w-44 h-44 md:w-full md:h-56 rounded-2xl object-cover border border-slate-100 shadow-md'
+            alt='Kamalesh S'
+            className='w-44 h-44 md:w-full md:h-56 rounded-2xl object-cover'
           />
-          {/* Card  */}
+
+          {/* Personal Information Card */}
           <Card>
             {personalInfo.map((info, index) => {
               const Icon = info.icon;
@@ -96,19 +98,19 @@ export default function About() {
                   key={info.label}
                   className={`flex items-start gap-4 py-4 ${
                     index !== personalInfo.length - 1
-                      ? "border-b border-slate-200"
+                      ? "border-b border-white/10"
                       : ""
                   }`}>
                   <div className='mt-1 text-accent-main'>
                     <Icon size={18} />
                   </div>
 
-                  <div className='flex-1'>
+                  <div className='flex-1 min-w-0'>
                     <p className='text-sm text-accent-main font-medium'>
                       {info.label}
                     </p>
 
-                    <p className='mt-1 font-semibold text-accent-light break-words'>
+                    <p className='mt-1 font-semibold text-white/90 break-words'>
                       {info.value}
                     </p>
                   </div>
