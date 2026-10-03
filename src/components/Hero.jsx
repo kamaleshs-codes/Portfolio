@@ -97,10 +97,10 @@ export default function Hero() {
 
       {/* Greeting section */}
       <div>
-        <h1 className='font-outfit text-3xl font-extrabold leading-tight text-main hover-text-accent-light md:text-3xl lg:text-4xl'>
+        <h1 className='font-outfit text-3xl font-extrabold leading-tight text-main hover-text-accent-main-light md:text-3xl lg:text-4xl'>
           {heroContent.greeting}{" "}
           <motion.span
-            className='bg-gradient-to-r from-indigo-400 hover-text-accent-main to-sky-400 bg-clip-text text-transparent text-5xl'
+            className='bg-gradient-to-r from-indigo-400 hover-text-accent-main-main to-sky-400 bg-clip-text text-transparent text-5xl'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7 }}>
@@ -108,7 +108,7 @@ export default function Hero() {
 
             {isTyping && (
               <motion.span
-                className='ml-1 inline-block text-accent-main'
+                className='ml-1 inline-block text-accent-main-main'
                 animate={{ opacity: [1, 0, 1] }}
                 transition={{
                   duration: 0.8,
@@ -171,7 +171,7 @@ export default function Hero() {
             <AnimatePresence mode='wait'>
               <motion.h2
                 key={heroContent.roles[displayedRole]}
-                className='text-lg font-semibold text-accent-main md:text-2xl'
+                className='text-lg font-semibold text-accent-main-main md:text-2xl'
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
@@ -191,7 +191,7 @@ export default function Hero() {
             </p>
 
             {/* CTA */}
-            <div className='mt-4 text-accent-main'>{heroContent.cta}</div>
+            <div className='mt-4 text-accent-main-main'>{heroContent.cta}</div>
           </TextReveal>
 
           {/* Buttons */}
@@ -223,7 +223,7 @@ export default function Hero() {
                       : undefined
                   }
                   aria-label={social.label}
-                  className='rounded bg-accent-main p-1 text-primary transition-all duration-300 hover:-translate-y-1'>
+                  className='rounded bg-accent-main-main p-1 text-primary transition-all duration-300 hover:-translate-y-1'>
                   <Icon size={27} />
                 </a>
               );

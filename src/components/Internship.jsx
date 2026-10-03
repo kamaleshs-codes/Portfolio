@@ -13,7 +13,7 @@ export default function Internship() {
       ],
       icon: (
         <svg
-          className='w-5 h-5 text-accent-main mr-2'
+          className='w-5 h-5 text-accent-main-main mr-2'
           fill='none'
           stroke='currentColor'
           viewBox='0 0 24 24'>
@@ -37,7 +37,7 @@ export default function Internship() {
       ],
       icon: (
         <svg
-          className='w-5 h-5 text-accent-main mr-2'
+          className='w-5 h-5 text-accent-main-main mr-2'
           fill='none'
           stroke='currentColor'
           viewBox='0 0 24 24'>
@@ -61,7 +61,7 @@ export default function Internship() {
       ],
       icon: (
         <svg
-          className='w-5 h-5 text-accent-main mr-2'
+          className='w-5 h-5 text-accent-main-main mr-2'
           fill='none'
           stroke='currentColor'
           viewBox='0 0 24 24'>
@@ -103,18 +103,15 @@ export default function Internship() {
               <div className='bg-surface p-6 md:p-8 rounded-2xl border border-slate-100 hover:border-slate-200/80 shadow-sm hover:shadow-md transition-all duration-300'>
                 <div className='flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4'>
                   <div>
-                    
-                    <h3 className='font-outfit font-extrabold text-xl md:text-2xl text-accent-main mt-3 leading-tight'>
+                    <h3 className='font-outfit font-extrabold text-xl md:text-2xl text-accent-main-main mt-3 leading-tight'>
                       {item.role}
                     </h3>
-                    <span className='text-xs font-semibold uppercase tracking-wider text-accent bg-accent/5 px-2.5 py-1 rounded-full'>
+                    <span className='text-xs font-semibold uppercase tracking-wider text-accent-main bg-accent-main/5 px-2.5 py-1 rounded-full'>
                       {item.period}
                     </span>
                   </div>
                   <div className='flex items-center space-x-3'>
-                    <span className='btn-primary px-3 py-1'>
-                      {item.type}
-                    </span>
+                    <span className='btn-primary px-3 py-1'>{item.type}</span>
                   </div>
                 </div>
 
@@ -127,8 +124,8 @@ export default function Internship() {
                   {item.bullets.map((bullet, bIdx) => (
                     <li
                       key={bIdx}
-                      className='text-sm text-accent-light flex items-start space-x-2'>
-                      <span className='text-accent mt-1.5 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0'></span>
+                      className='text-sm text-accent-main-light flex items-start space-x-2'>
+                      <span className='text-accent-main mt-1.5 w-1.5 h-1.5 rounded-full bg-accent-main flex-shrink-0'></span>
                       <span className='font-light'>{bullet}</span>
                     </li>
                   ))}

@@ -70,14 +70,14 @@ export default function Contact() {
       className='relative overflow-hidden bg-main px-6 py-20 md:px-20 md:py-28'
       id='contact'>
       {/* Background visual element */}
-      <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl pointer-events-none'></div>
+      <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent-main/5 rounded-full blur-3xl pointer-events-none'></div>
 
       <div className='max-w-4xl mx-auto text-center relative z-10'>
         <div className='mb-12'>
-          <h2 className='font-outfit font-extrabold text-3xl md:text-4xl text-accent-main tracking-tight'>
+          <h2 className='font-outfit font-extrabold text-3xl md:text-4xl text-accent-main-main tracking-tight'>
             Get In Touch
           </h2>
-          <div className='h-1 w-20 bg-accent-light mt-2 rounded mx-auto'></div>
+          <div className='h-1 w-20 bg-accent-main-light mt-2 rounded mx-auto'></div>
           <p className='pt-4 text-white text-base max-w-lg mx-auto font-light'>
             If you want to discuss a project, query code, or chat about frontend
             opportunities, feel free to reach out. I will get back to you as
@@ -90,10 +90,10 @@ export default function Contact() {
             <div
               key={idx}
               className='bg-surface border border-slate-800 p-6 rounded-2xl hover:border-slate-700 transition-all duration-300'>
-              <div className='bg-accent-main w-12 h-12 rounded-xl flex items-center justify-center mb-4 border border-slate-750'>
+              <div className='bg-accent-main-main w-12 h-12 rounded-xl flex items-center justify-center mb-4 border border-slate-750'>
                 {detail.icon}
               </div>
-              <h3 className='text-sm font-semibold text-accent-main uppercase tracking-wider mb-1'>
+              <h3 className='text-sm font-semibold text-accent-main-main uppercase tracking-wider mb-1'>
                 {detail.label}
               </h3>
               {detail.href ? (

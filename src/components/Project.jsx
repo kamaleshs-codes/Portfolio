@@ -128,17 +128,17 @@ export default function Project() {
                   {project.tech.map((tag) => (
                     <span
                       key={tag}
-                      className='text-xs font-semibold px-2.5 py-1 rounded-md bg-transparent text-accent-light hover-text-accent-main cursor-pointer border border-white hover:border-accent'>
+                      className='text-xs font-semibold px-2.5 py-1 rounded-md bg-transparent text-accent-main-light hover-text-accent-main-main cursor-pointer border border-white hover:border-accent'>
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <h3 className='font-outfit font-bold text-xl text-accent-main mb-2'>
+                <h3 className='font-outfit font-bold text-xl text-accent-main-main mb-2'>
                   {project.title}
                 </h3>
 
-                <p className='text-sm text-accent-light leading-relaxed mb-4 flex-grow'>
+                <p className='text-sm text-accent-main-light leading-relaxed mb-4 flex-grow'>
                   {project.description}
                 </p>
 
@@ -147,8 +147,10 @@ export default function Project() {
                   {project.bullets.map((bullet, bIdx) => (
                     <li
                       key={bIdx}
-                      className='text-xs text-accent-light flex items-start space-x-2'>
-                      <span className='text-accent mt-0.5 font-bold'>•</span>
+                      className='text-xs text-accent-main-light flex items-start space-x-2'>
+                      <span className='text-accent-main mt-0.5 font-bold'>
+                        •
+                      </span>
                       <span>{bullet}</span>
                     </li>
                   ))}

@@ -31,6 +31,10 @@ body {
   --color-theme-muted: #94a3b8;
   --color-theme-sub-main: #25122c;
 
+  /* Fonts */
+  --font-sans: "Inter", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
+
   /* Border */
   --color-theme-border: #334155;
 
@@ -76,11 +80,11 @@ body {
   background-color: #040d23;
 }
 
-.bg-accent-main {
+.bg-accent-main-main {
   background-color: #00ffe1;
 }
 
-.bg-accent-light {
+.bg-accent-main-light {
   background-color: #00d527;
 }
 
@@ -94,11 +98,11 @@ body {
   color: #00025e;
 }
 
-.text-accent-main {
+.text-accent-main-main {
   color: #00ffe1;
 }
 
-.text-accent-light {
+.text-accent-main-light {
   color: #00d527;
 }
 
@@ -114,7 +118,7 @@ body {
   color: #25122c;
 }
 
-.text-accent-secondary {
+.text-accent-main-secondary {
   color: #003e3b;
 }
 
@@ -138,11 +142,11 @@ body {
   background-color: #040d23;
 }
 
-.hover-text-accent-main:hover {
+.hover-text-accent-main-main:hover {
   color: #00ffe1;
 }
 
-.hover-text-accent-light:hover {
+.hover-text-accent-main-light:hover {
   color: #00d527;
 }
 

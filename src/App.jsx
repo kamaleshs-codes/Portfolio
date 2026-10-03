@@ -14,7 +14,7 @@ import Certifications from "./components/Certifications.jsx";
 
 function App() {
   return (
-    <div className='App bg-white min-h-screen text-textMain selection:bg-accent selection:text-white'>
+    <div className='App bg-white min-h-screen text-textMain selection:bg-accent-main selection:text-white'>
       <Header />
       <main>
         <motion.div

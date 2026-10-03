@@ -101,12 +101,12 @@ export default function About() {
                       ? "border-b border-white/10"
                       : ""
                   }`}>
-                  <div className='mt-1 text-accent-main'>
+                  <div className='mt-1 text-accent-main-main'>
                     <Icon size={18} />
                   </div>
 
                   <div className='flex-1 min-w-0'>
-                    <p className='text-sm text-accent-main font-medium'>
+                    <p className='text-sm text-accent-main-main font-medium'>
                       {info.label}
                     </p>
 
@@ -133,7 +133,7 @@ export default function About() {
 
           <div className='h-1 w-16 bg-surface rounded mt-3 mb-6'></div>
 
-          <h3 className='text-2xl font-semibold mb-3 text-accent-secondary'>
+          <h3 className='text-2xl font-semibold mb-3 text-accent-main-secondary'>
             {aboutContent.subtitle}
           </h3>
 
@@ -160,7 +160,7 @@ export default function About() {
             {technicalHighlights.map((skill) => (
               <li
                 key={skill}
-                className='flex items-start font-semibold gap-2 text-accent-secondary'>
+                className='flex items-start font-semibold gap-2 text-accent-main-secondary'>
                 <span className='text-primary font-bold mt-0.5'>✔</span>
 
                 <span>{skill}</span>

@@ -47,7 +47,7 @@ export default function Skills() {
     { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
     { name: "Socket.IO", icon: TbBrandSocketIo, color: "#ffffff" },
     { name: "Git", icon: SiGit, color: "#F05032" },
-    { name: "GitHub", icon: FaGithub     , color: "#ffffff" },
+    { name: "GitHub", icon: FaGithub, color: "#ffffff" },
     { name: "Postman", icon: SiPostman, color: "#FF6C37" },
     { name: "Vite", icon: SiVite, color: "#646CFF" },
     { name: "Render", icon: SiRender, color: "#46E3B7" },
@@ -170,11 +170,11 @@ export default function Skills() {
               viewport={{ once: true }}>
               {/* Card Header */}
               <div className='flex items-center gap-3 mb-5'>
-                <div className='bg-accent-main border border-slate-200/60 p-3 rounded-xl shadow-sm'>
+                <div className='bg-accent-main-main border border-slate-200/60 p-3 rounded-xl shadow-sm'>
                   <Icon className='w-6 h-6 text-primary' />
                 </div>
 
-                <h3 className='font-outfit font-bold text-lg text-accent-main'>
+                <h3 className='font-outfit font-bold text-lg text-accent-main-main'>
                   {group.category}
                 </h3>
               </div>
@@ -184,7 +184,7 @@ export default function Skills() {
                 {group.skills.map((skill) => (
                   <span
                     key={skill}
-                    className='px-3 py-1.5 text-sm rounded-lg bg-surface-secondary border border-slate-200 text-accent-light shadow-sm transition-all duration-200 hover:border-accent hover-text-accent-main cursor-pointer hover:shadow-md'>
+                    className='px-3 py-1.5 text-sm rounded-lg bg-surface-secondary border border-slate-200 text-accent-main-light shadow-sm transition-all duration-200 hover:border-accent hover-text-accent-main-main cursor-pointer hover:shadow-md'>
                     {skill}
                   </span>
                 ))}

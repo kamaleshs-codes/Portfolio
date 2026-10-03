@@ -140,12 +140,12 @@ export default function Certifications() {
               key={idx}
               className='bg-surface border border-slate-100 p-6 rounded-2xl hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center hover:-translate-y-1'>
               {/* Badge Icon */}
-              <div className='w-16 h-16 bg-accent-main border border-slate-150 rounded-2xl flex items-center justify-center shadow-sm mb-6'>
+              <div className='w-16 h-16 bg-accent-main-main border border-slate-150 rounded-2xl flex items-center justify-center shadow-sm mb-6'>
                 {cert.icon}
               </div>
 
               {/* Tag Category */}
-              <span className='text-accent-main font-bold tracking-wider uppercase bg-accent/5 px-2.5 py-1 rounded-full mb-3'>
+              <span className='text-accent-main-main font-bold tracking-wider uppercase bg-accent-main/5 px-2.5 py-1 rounded-full mb-3'>
                 {cert.type}
               </span>
 
@@ -154,9 +154,9 @@ export default function Certifications() {
                 {cert.title}
               </h3>
 
-              <p className='text-xs text-accent-main leading-relaxed border-t border-slate-200/50 w-full pt-4 mt-2'>
+              <p className='text-xs text-accent-main-main leading-relaxed border-t border-slate-200/50 w-full pt-4 mt-2'>
                 Issuer:{" "}
-                <span className='font-semibold text-accent-light'>
+                <span className='font-semibold text-accent-main-light'>
                   {cert.issuer}
                 </span>
               </p>

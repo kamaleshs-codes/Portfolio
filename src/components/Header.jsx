@@ -27,7 +27,7 @@ export default function Header() {
         className='font-outfit font-extrabold text-2xl tracking-tight text-white hover:opacity-90 transition-opacity'
         href='#home'>
         Kamalesh{" "}
-        <span className='text-accent-main hover-text-accent-light font-black'>
+        <span className='text-accent-main-main hover-text-accent-main-light font-black'>
           - Portfolio
         </span>
       </a>
@@ -39,7 +39,7 @@ export default function Header() {
             <li key={link.name}>
               <a
                 href={link.href}
-                className='hover-text-accent-main border-b-2 border-transparent hover:border-accent py-1.5 transition-all duration-200'>
+                className='hover-text-accent-main-main border-b-2 border-transparent hover:border-accent py-1.5 transition-all duration-200'>
                 {link.name}
               </a>
             </li>
@@ -50,7 +50,7 @@ export default function Header() {
       {/* Mobile Menu Toggle */}
       <button
         onClick={() => setToggleMenu(!toggleMenu)}
-        className='block md:hidden text-white hover:text-accent transition-colors focus:outline-none'
+        className='block md:hidden text-white hover:text-accent-main transition-colors focus:outline-none'
         aria-label='Toggle navigation menu'>
         {toggleMenu ? (
           <FiX className='h-6 w-6' />
@@ -75,7 +75,7 @@ export default function Header() {
                 <li key={link.name} className='w-full text-center'>
                   <a
                     href={link.href}
-                    className='block py-3 hover:bg-slate-800/50 hover:text-accent transition-all duration-200'>
+                    className='block py-3 hover:bg-slate-800/50 hover:text-accent-main transition-all duration-200'>
                     {link.name}
                   </a>
                 </li>
