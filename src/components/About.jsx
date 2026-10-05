@@ -7,21 +7,28 @@ import {
   FaMapMarkerAlt,
   FaEnvelope,
   FaLanguage,
+  FaUserCircle,
 } from "react-icons/fa";
 import { Card } from "./Card";
+import { FaAddressCard, FaCommentDots } from "react-icons/fa6";
+import SectionSubtitle from "./ui/SectionSubtitle";
+import TypingText from "./animations/TypingText";
+import TextReveal from "./animations/TextReveal";
 
 export default function About() {
   const aboutContent = {
-    title: "About Me",
+    title: "ABOUT ME",
 
-    subtitle: "GET TO KNOW ME BETTER:",
+    subtitle: "GET TO KNOW ME BETTER",
 
     paragraphs: [
-      "I'm a Computer Science postgraduate and MERN Stack Developer with hands-on experience building scalable web applications.",
+      "I'm ",
 
-      "I enjoy transforming ideas into real-world solutions using React.js, Node.js, Express.js, MongoDB, and Tailwind CSS. Through multiple projects, I've gained practical experience in RESTful APIs, JWT authentication, CRUD operations, deployment, and real-time communication using Socket.IO.",
+      "I work primarily with React.js, JavaScript, TypeScript, HTML, CSS, Tailwind CSS, and Bootstrap, with working knowledge of Node.js, Express.js, MongoDB, REST APIs, JWT authentication, CRUD operations, and Socket.IO.",
 
-      "I'm passionate about continuously improving my development skills, exploring AI-assisted software development, and building clean, responsive, and user-focused applications.",
+      "Through academic, personal, and internship projects, I've gained practical experience in building reusable React components, implementing responsive interfaces, integrating APIs, managing application state, and deploying web applications.",
+
+      "I'm continuously improving my frontend development skills while exploring modern web technologies and AI-assisted software development, with the goal of building clean, scalable, and practical web solutions.",
     ],
   };
 
@@ -48,7 +55,7 @@ export default function About() {
     },
     {
       label: "Email",
-      value: "skamalesh0204@outlook.com",
+      value: "kamalesh.s.tech@gmail.com",
       icon: FaEnvelope,
     },
     {
@@ -59,115 +66,169 @@ export default function About() {
   ];
 
   const technicalHighlights = [
-    "HTML5, CSS3, JavaScript (ES6+)",
-    "React.js, Tailwind CSS, Bootstrap",
-    "Node.js, Express.js, RESTful APIs",
-    "JWT Authentication",
-    "CRUD Operations",
-    "MongoDB",
-    "Socket.IO",
-    "Git & GitHub",
-    "Postman & Thunder Client",
-    "Problem Solving & Team Collaboration",
+    "HTML5, CSS3, JavaScript (ES6+), TypeScript",
+    "React.js, React Hooks, Context API, React Router",
+    "Tailwind CSS, Bootstrap, Responsive UI",
+    "REST APIs, Axios, JSON, CRUD Operations",
+    "Node.js, Express.js, JWT Authentication",
+    "MongoDB, Mongoose, JSON Server",
+    "Socket.IO & Real-Time Communication",
+    "Git & GitHub, Deployment & API Testing",
+    "Postman, Thunder Client & Chrome DevTools",
+    "AI-Assisted Development & Problem Solving",
   ];
 
+  const listContainer = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.4,
+      },
+    },
+  };
+
+  const listItem = {
+    hidden: {
+      opacity: 0,
+      y: 15,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
-    <section id='about' className='py-20 px-6 md:px-20 bg-primary'>
-      <div className='max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-start'>
-        {/* Left Column */}
-        {/* Left Column */}
-        <motion.div
-          className='col-span-1 flex flex-col items-center md:items-start space-y-6'
-          initial={{ opacity: 0, x: -12 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}>
-          {/* Profile Image */}
-          <img
-            src={ProfileImg}
-            alt='Kamalesh S'
-            className='w-44 h-44 md:w-full md:h-56 rounded-2xl object-cover'
-          />
+    <section id='about' className='bg-secondary px-6 py-20 md:px-20'>
+      <div className='mx-auto max-w-6xl'>
+        {/* Section Heading */}
+        <motion.h2
+          className='mb-6 flex items-center justify-center gap-3 font-outfit text-3xl font-extrabold text-heading-secondary'
+          initial={{ opacity: 0, y: -15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{
+            duration: 0.7,
+            ease: "easeOut",
+          }}>
+          <FaCommentDots className='text-accent-dark' size={30} />
+          {aboutContent.title}
+        </motion.h2>
 
-          {/* Personal Information Card */}
-          <Card>
-            {personalInfo.map((info, index) => {
-              const Icon = info.icon;
+        {/* Content */}
+        <div className='grid grid-cols-1 items-start gap-12 md:grid-cols-3'>
+          {/* Left Column */}
+          <motion.div
+            className='mt-8 col-span-1 flex flex-col items-center space-y-6 md:items-start'
+            initial={{ opacity: 0, x: -80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+              duration: 0.8,
+              ease: "easeOut",
+            }}>
+            {/* Profile Image */}
+            <img
+              src={ProfileImg}
+              alt='Kamalesh S'
+              className='h-44 w-44 rounded-2xl object-cover md:h-56 md:w-full'
+            />
 
-              return (
-                <div
-                  key={info.label}
-                  className={`flex items-start gap-4 py-4 ${
-                    index !== personalInfo.length - 1
-                      ? "border-b border-white/10"
-                      : ""
-                  }`}>
-                  <div className='mt-1 text-accent-main-main'>
-                    <Icon size={18} />
+            {/* Personal Information Card */}
+            <Card>
+              <h3 className='mb-2 flex items-center gap-2 border-b border-secondary pb-3 font-outfit text-xl font-semibold text-accent'>
+                <FaAddressCard size={20} />
+                PERSONAL INFORMATION
+              </h3>
+
+              {personalInfo.map((info, index) => {
+                const Icon = info.icon;
+
+                return (
+                  <div
+                    key={info.label}
+                    className={`flex items-center gap-4 py-4 ${
+                      index !== personalInfo.length - 1
+                        ? "border-b border-secondary"
+                        : ""
+                    }`}>
+                    <div className='mt-1 text-accent'>
+                      <Icon size={18} />
+                    </div>
+
+                    <div className='min-w-0 flex-1'>
+                      <p className='text-sm font-medium text-accent-light'>
+                        {info.label}
+                      </p>
+
+                      <p className='mt-1 break-words font-semibold text-neutral'>
+                        {info.value}
+                      </p>
+                    </div>
                   </div>
+                );
+              })}
+            </Card>
+          </motion.div>
 
-                  <div className='flex-1 min-w-0'>
-                    <p className='text-sm text-accent-main-main font-medium'>
-                      {info.label}
-                    </p>
+          {/* Right Column */}
+          <motion.div
+            className='col-span-2'
+            initial={{ opacity: 0, x: 80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.1,
+              ease: "easeOut",
+            }}>
+            <SectionSubtitle>{aboutContent.subtitle}</SectionSubtitle>
 
-                    <p className='mt-1 font-semibold text-white/90 break-words'>
-                      {info.value}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </Card>
-        </motion.div>
+            {/* About Description */}
+            <div className='mb-6 space-y-3 text-lg leading-relaxed text-body-secondary'>
+              <TextReveal>
+                <p className='font-bold'>
+                  I'm Kamalesh S, a Computer Science postgraduate and FRONTEND
+                  WEB and MERN STACK DEVELOPER with hands-on experience building
+                  responsive and user-focused web applications.
+                </p>
+              </TextReveal>
 
-        {/* Right Column */}
-        <motion.div
-          className='col-span-2'
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.08 }}>
-          {/* Section Heading */}
-          <h2 className='font-outfit font-extrabold text-3xl text-primary'>
-            {aboutContent.title}
-          </h2>
+              {aboutContent.paragraphs.slice(1).map((paragraph, index) => (
+                <TextReveal key={index} delay={0.1 * (index + 1)}>
+                  <p>{paragraph}</p>
+                </TextReveal>
+              ))}
+            </div>
 
-          <div className='h-1 w-16 bg-surface rounded mt-3 mb-6'></div>
+            {/* Technical Highlights */}
+            <motion.ul
+              className='grid grid-cols-1 gap-3 sm:grid-cols-2'
+              variants={listContainer}
+              initial='hidden'
+              whileInView='visible'
+              viewport={{ once: true, amount: 0.2 }}>
+              {technicalHighlights.map((skill) => (
+                <motion.li
+                  key={skill}
+                  className='flex items-start gap-2 bg-surface px-3 py-2 text-neutral'
+                  variants={listItem}
+                  style={{
+                    borderRadius: "24px",
+                    borderBottomRightRadius: "9999px",
+                  }}>
+                  <span className='shrink-0 font-bold text-accent'>✔</span>
 
-          <h3 className='text-2xl font-semibold mb-3 text-accent-main-secondary'>
-            {aboutContent.subtitle}
-          </h3>
-
-          {/* About Description */}
-          <div className='space-y-5 text-sub-main leading-relaxed mb-6'>
-            {aboutContent.paragraphs.map((paragraph, index) => (
-              <p key={index}>
-                {index === 0 ? (
-                  <>
-                    <span className='text-primary font-semibold'>
-                      I'm Kamalesh S
-                    </span>
-                    {paragraph.replace("I'm", ",")}
-                  </>
-                ) : (
-                  paragraph
-                )}
-              </p>
-            ))}
-          </div>
-
-          {/* Technical Highlights */}
-          <ul className='grid grid-cols-1 sm:grid-cols-2 gap-3'>
-            {technicalHighlights.map((skill) => (
-              <li
-                key={skill}
-                className='flex items-start font-semibold gap-2 text-accent-main-secondary'>
-                <span className='text-primary font-bold mt-0.5'>✔</span>
-
-                <span>{skill}</span>
-              </li>
-            ))}
-          </ul>
-        </motion.div>
+                  <span>{skill}</span>
+                </motion.li>
+              ))}
+            </motion.ul>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

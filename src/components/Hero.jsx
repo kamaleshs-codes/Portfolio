@@ -5,6 +5,7 @@ import { MdEmail } from "react-icons/md";
 
 import myprofile from "../assets/myprofile.png";
 import TextReveal from "./animations/TextReveal";
+import Button from "./ui/Button";
 
 export default function Hero() {
   const heroContent = {
@@ -28,11 +29,13 @@ export default function Hero() {
     const typingInterval = setInterval(() => {
       setDisplayedName(heroContent.name.slice(0, index + 1));
       index++;
+
       if (index === heroContent.name.length) {
         clearInterval(typingInterval);
         setIsTyping(false);
       }
     }, 120);
+
     return () => clearInterval(typingInterval);
   }, []);
 
@@ -40,6 +43,7 @@ export default function Hero() {
     const roleInterval = setInterval(() => {
       setDisplayedRole((prev) => (prev + 1) % heroContent.roles.length);
     }, 3000);
+
     return () => clearInterval(roleInterval);
   }, []);
 
@@ -55,17 +59,14 @@ export default function Hero() {
     {
       label: "View Projects",
       href: "#project",
-      className: "btn-primary",
     },
     {
       label: "Download Resume",
       href: "#resume",
-      className: "btn-primary",
     },
     {
       label: "Contact Me",
       href: "#contact",
-      className: "btn-primary",
     },
   ];
 
@@ -90,17 +91,18 @@ export default function Hero() {
   return (
     <section
       id='home'
-      className='relative overflow-hidden bg-main px-6 py-20 md:px-20 md:py-28'>
-      {/* Background setup  */}
-      <div className='absolute -top-24 -right-24 h-80 w-80 rounded-full bg-indigo-500/10 blur-3xl'></div>
-      <div className='absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-sky-500/10 blur-3xl'></div>
+      className='relative overflow-hidden bg-primary px-6 py-20 md:px-20 md:py-28'>
+      {/* Background setup */}
+      <div className='absolute -top-24 -right-24 h-80 w-80 rounded-full bg-accent/10 blur-3xl' />
+
+      <div className='absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-accent-light/10 blur-3xl' />
 
       {/* Greeting section */}
       <div>
-        <h1 className='font-outfit text-3xl font-extrabold leading-tight text-main hover-text-accent-main-light md:text-3xl lg:text-4xl'>
+        <h1 className='font-outfit text-3xl font-extrabold leading-tight text-heading md:text-3xl lg:text-4xl'>
           {heroContent.greeting}{" "}
           <motion.span
-            className='bg-gradient-to-r from-indigo-400 hover-text-accent-main-main to-sky-400 bg-clip-text text-transparent text-5xl'
+            className='bg-gradient-to-r from-accent-light to-accent bg-clip-text text-5xl text-transparent'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7 }}>
@@ -108,7 +110,7 @@ export default function Hero() {
 
             {isTyping && (
               <motion.span
-                className='ml-1 inline-block text-accent-main-main'
+                className='ml-1 inline-block text-accent'
                 animate={{ opacity: [1, 0, 1] }}
                 transition={{
                   duration: 0.8,
@@ -122,9 +124,9 @@ export default function Hero() {
         </h1>
       </div>
 
-      {/* My Profile section  */}
-      <div className='relative z-10 mx-auto flex max-w-7xl flex-col-reverse items-center justify-between gap-16 md:flex-row mt-7'>
-        {/* left side  */}
+      {/* My Profile section */}
+      <div className='relative z-10 mx-auto mt-7 flex max-w-7xl flex-col-reverse items-center justify-between gap-16 md:flex-row'>
+        {/* Left side */}
         <motion.div
           className='flex w-full flex-col justify-center md:w-1/2'
           initial={{ opacity: 0, y: 15 }}
@@ -132,9 +134,9 @@ export default function Hero() {
           transition={{ duration: 0.6 }}>
           {/* Status */}
           <motion.div
-            className='inline-flex w-fit items-center gap-2 rounded-full border border-slate-700/50 px-4 py-2 backdrop-blur'
+            className='inline-flex w-fit items-center gap-2 rounded-full border border-accent/30 px-4 py-2 backdrop-blur'
             animate={{
-              backgroundColor: statusStyle ? "#090036" : "#2c0023",
+              backgroundColor: statusStyle ? "#003e3b" : "#002864",
             }}
             transition={{
               duration: 1,
@@ -142,7 +144,7 @@ export default function Hero() {
             }}>
             {/* Status Dot */}
             <motion.span
-              className='h-2 w-2 rounded-full animate-pulse'
+              className='h-2 w-2 animate-pulse rounded-full'
               animate={{
                 backgroundColor: statusStyle ? "#00ffe1" : "#00d527",
               }}
@@ -171,7 +173,7 @@ export default function Hero() {
             <AnimatePresence mode='wait'>
               <motion.h2
                 key={heroContent.roles[displayedRole]}
-                className='text-lg font-semibold text-accent-main-main md:text-2xl'
+                className='text-lg font-semibold text-accent-light md:text-2xl'
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
@@ -186,24 +188,23 @@ export default function Hero() {
 
           {/* Description */}
           <TextReveal delay={0.2}>
-            <p className='mt-4 max-w-xl text-base leading-8 text-main md:text-lg'>
+            <p className='mt-4 max-w-xl text-base leading-8 text-body md:text-lg'>
               {heroContent.description}
             </p>
 
             {/* CTA */}
-            <div className='mt-4 text-accent-main-main'>{heroContent.cta}</div>
+            <div className='mt-4 text-accent-light'>{heroContent.cta}</div>
           </TextReveal>
 
           {/* Buttons */}
           <div className='mt-5 flex flex-wrap gap-4'>
             {buttons.map((button) => (
-              <a
+              <Button
                 key={button.label}
                 href={button.href}
-                download={button.download}
-                className={`${button.className} text-center`}>
+                download={button.download}>
                 {button.label}
-              </a>
+              </Button>
             ))}
           </div>
 
@@ -223,7 +224,7 @@ export default function Hero() {
                       : undefined
                   }
                   aria-label={social.label}
-                  className='rounded bg-accent-main-main p-1 text-primary transition-all duration-300 hover:-translate-y-1'>
+                  className='rounded-full bg-accent p-2 text-primary transition-all duration-300 hover:-translate-y-1'>
                   <Icon size={27} />
                 </a>
               );
@@ -231,19 +232,19 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Right */}
-
+        {/* Right side */}
         <motion.div
           className='flex w-full justify-center md:w-1/2 md:justify-center'
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}>
           <div className='group relative'>
-            <div className='absolute inset-0 rounded-3xl bg-gradient-to-r from-indigo-500/20 to-sky-500/20 blur-3xl transition-opacity duration-300 group-hover:opacity-100'></div>
+            <div className='absolute inset-0 rounded-3xl bg-accent/10 blur-3xl transition-opacity duration-300 group-hover:opacity-100' />
+
             <motion.img
               src={myprofile}
               alt='Kamalesh S'
-              className='relative h-72 w-72 rounded-3xl border border-slate-800/80 object-cover shadow-2xl md:h-96 md:w-96'
+              className='relative h-72 w-72 rounded-3xl border-2 border-muted object-cover shadow-2xl md:h-96 md:w-96'
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.3 }}
             />

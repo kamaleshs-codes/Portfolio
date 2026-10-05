@@ -8,66 +8,34 @@
   /* ---------- Brand ---------- */
 
   --primary: #002864;
-  --secondary: #cbcbc4;
-  --main: #000e2d;
-  --surface: #2c0023;
-  --neutral: #fffb94;
-  --accent: #00ffe1;
-  --accent-light: #00d527;
-  --accent-dark: #003633;
+  --secondary: #a4c9ff;
+  --surface: #12002c;
+  --neutral: #94ffc2;
+  --accent: #00fff7;
+  --accent-light: #00ff2f;
+  --accent-dark: #001644;
 
   /* ---------- Text ---------- */
 
-  --text-heading: #f8fafc;
-  --text-body: #a2adc0;
-  --text-heading-secondary: #060036;
+  --text-heading: #feffff;
+  --text-body: #a9b7ce;
+  --text-heading-secondary: #090049;
   --text-body-secondary: #212527;
 
   /* ---------- Border ---------- */
 
-  --border: #334155;
+  --border-muted: #37475e;
+
+  /* ---------- Button ---------- */
+
+  --btn: #0022ff;
+  --btn-hover: #0a0041;
+  --btn-text: #85ffe3;
 
   /* ---------- Fonts ---------- */
 
   --font-inter: "Inter", sans-serif;
   --font-outfit: "Outfit", sans-serif;
-
-  /* ---------- Glass ---------- */
-
-  --glass-background: rgba(4, 13, 35, 0.82);
-  --glass-border: rgba(0, 255, 225, 0.18);
-  --glass-border-hover: rgba(0, 255, 225, 0.35);
-
-  /* ---------- Shadows ---------- */
-
-  --shadow-primary: rgba(1, 2, 74, 0.35);
-  --shadow-accent: rgba(6, 131, 117, 0.3);
-
-  /* ---------- Header ---------- */
-
-  --header-background: #172554;
-  --header-border: rgba(30, 41, 59, 0.6);
-
-  /* ---------- Mobile Navigation ---------- */
-
-  --mobile-border: #1e293b;
-  --mobile-text: #cbd5e1;
-  --mobile-text-hover: #38bdf8;
-
-  /* ---------- Timeline ---------- */
-
-  --timeline-border: #000000;
-  --timeline-dot: #38bdf8;
-
-  /* ---------- Project Overlay ---------- */
-
-  --project-overlay: rgba(15, 23, 42, 0.95);
-
-  /* ---------- Scrollbar ---------- */
-
-  --scrollbar-track: #15306a;
-  --scrollbar-thumb: #897e7e;
-  --scrollbar-thumb-hover: #ffffff;
 }
 
 /* =========================================================
@@ -79,7 +47,6 @@
 
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
-  --color-main: var(--main);
   --color-surface: var(--surface);
   --color-neutral: var(--neutral);
 
@@ -93,20 +60,16 @@
   --color-heading-secondary: var(--text-heading-secondary);
   --color-body-secondary: var(--text-body-secondary);
 
-  --color-border: var(--border);
+  --color-muted: var(--border-muted);
 
-  
+  --color-btn: var(--btn);
+  --color-btn-hover: var(--btn-hover);
+  --color-btn-text: var(--btn-text);
 
   /* ---------- Fonts ---------- */
 
   --font-inter: var(--font-inter);
   --font-outfit: var(--font-outfit);
-
-  /* ---------- Radius ---------- */
-
-  --radius-sm: 12px;
-  --radius-md: 18px;
-  --radius-lg: 24px;
 }
 
 /* =========================================================
@@ -123,290 +86,10 @@ body {
 }
 
 /* =========================================================
-   Glassmorphism
+   About - Technical Highlights
 ========================================================= */
 
-.glass-card {
-  background: var(--glass-background);
-
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-md);
-
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.55),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
-
-  transition:
-    transform 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.glass-card:hover {
-  transform: translateY(-4px);
-
-  border-color: var(--glass-border-hover);
-
-  box-shadow:
-    0 14px 40px rgba(0, 0, 0, 0.4),
-    0 0 25px rgba(0, 255, 225, 0.08);
-}
-
-/* =========================================================
-   Shadows
-========================================================= */
-
-.shadow-primary {
-  box-shadow: 0 10px 30px var(--shadow-primary);
-}
-
-.shadow-accent {
-  box-shadow: 0 10px 30px var(--shadow-accent);
-}
-
-/* =========================================================
-   Buttons
-========================================================= */
-
-.btn-primary {
-  border-radius: 0.75rem;
-  padding: 0.625rem 1.5rem;
-
-  font-weight: 600;
-  color: #ffffff;
-
-  background-color: #4f46e5;
-
-  box-shadow: 0 4px 6px rgba(79, 70, 229, 0.1);
-
-  transition:
-    transform 0.3s ease,
-    background-color 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-
-  background-color: #6366f1;
-
-  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.2);
-}
-
-.btn-accent {
-  border-radius: 0.75rem;
-  padding: 0.625rem 1.5rem;
-
-  font-weight: 600;
-  color: #f1f5f9;
-
-  background-color: #0284c7;
-
-  box-shadow: 0 4px 6px rgba(14, 165, 233, 0.1);
-
-  transition:
-    transform 0.3s ease,
-    background-color 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.btn-accent:hover {
-  transform: translateY(-2px);
-
-  background-color: #3b82f6;
-
-  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.2);
-}
-
-.btn-secondary {
-  border: 1px solid #6366f1;
-  border-radius: 0.75rem;
-
-  padding: 0.625rem 1.5rem;
-
-  font-weight: 600;
-  color: #6366f1;
-
-  transition:
-    border-color 0.3s ease,
-    background-color 0.3s ease,
-    color 0.3s ease;
-}
-
-.btn-secondary:hover {
-  border-color: #818cf8;
-  background-color: #6366f1;
-  color: #ffffff;
-}
-
-.btn-resume {
-  border: 1px solid #6366f1;
-  border-radius: 0.75rem;
-
-  padding: 0.625rem 1.5rem;
-
-  color: #818cf8;
-
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
-}
-
-.btn-resume:hover {
-  background-color: #6366f1;
-  color: #ffffff;
-}
-
-/* =========================================================
-   Header
-========================================================= */
-
-.glass-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-
-  border-bottom: 1px solid var(--header-border);
-
-  background-color: var(--header-background);
-
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
-/* =========================================================
-   Mobile Navigation
-========================================================= */
-
-.mobile-nav-link {
-  width: 100%;
-
-  border-bottom: 1px solid var(--mobile-border);
-
-  padding: 0.75rem 0;
-
-  text-align: center;
-
-  font-size: 1.125rem;
-  font-weight: 500;
-
-  color: var(--mobile-text);
-
-  transition: color 0.2s ease;
-}
-
-.mobile-nav-link:hover {
-  color: var(--mobile-text-hover);
-}
-
-/* =========================================================
-   Timeline
-========================================================= */
-
-.timeline-dot {
-  position: absolute;
-  left: -6px;
-  top: 0.375rem;
-
-  width: 0.75rem;
-  height: 0.75rem;
-
-  border: 2px solid var(--timeline-border);
-  border-radius: 9999px;
-
-  background-color: var(--timeline-dot);
-
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-/* =========================================================
-   Project Overlay
-========================================================= */
-
-.project-overlay {
-  position: absolute;
-  inset: 0;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 0.75rem;
-
-  padding: 1.5rem;
-
-  text-align: center;
-
-  background-color: var(--project-overlay);
-
-  opacity: 0;
-
-  transition: opacity 0.3s ease;
-}
-
-.project-overlay:hover {
-  opacity: 1;
-}
-
-/* =========================================================
-   Elevated Surface
-========================================================= */
-
-.elevated {
-  background-color: var(--bg-surface);
-
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
-}
-
-/* =========================================================
-   Marquee
-========================================================= */
-
-.marquee {
-  display: flex;
-  width: max-content;
-
-  animation: marquee 32s linear infinite;
-}
-
-.marquee:hover {
-  animation-play-state: paused;
-}
-
-@keyframes marquee {
-  from {
-    transform: translateX(0%);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-/* =========================================================
-   Custom Scrollbar
-========================================================= */
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--scrollbar-track);
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background: var(--scrollbar-thumb);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--scrollbar-thumb-hover);
+.about-highlight {
+  border-radius: 24px;
+  border-bottom-right-radius: 9999px;
 }
