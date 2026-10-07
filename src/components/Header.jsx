@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   const navLinks = [
     { name: "Home", href: "#home" },
@@ -17,40 +18,76 @@ export default function Header() {
     { name: "Contact", href: "#contact" },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 120;
+
+      let currentSection = "home";
+
+      navLinks.forEach((link) => {
+        const section = document.querySelector(link.href);
+
+        if (section && section.offsetTop <= scrollPosition) {
+          currentSection = section.id;
+        }
+      });
+
+      setActiveSection(currentSection);
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <motion.header
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className='glass-header px-6 py-4 flex justify-between items-center transition-all duration-300'>
+      className='fixed left-0 top-0 z-50 flex w-full items-center justify-between bg-header px-6 py-4 transition-all duration-300'>
+      {/* Logo */}
       <a
-        className='font-outfit font-extrabold text-2xl tracking-tight text-white hover:opacity-90 transition-opacity'
-        href='#home'>
+        href='#home'
+        className='font-outfit text-2xl font-extrabold tracking-tight text-heading transition-opacity duration-300 hover:opacity-90'>
         Kamalesh{" "}
-        <span className='text-accent-main-main hover-text-accent-main-light font-black'>
+        <span className='font-black text-accent transition-colors duration-300 hover:text-accent-light'>
           - Portfolio
         </span>
       </a>
 
       {/* Desktop Navigation */}
       <nav className='hidden md:block'>
-        <ul className='flex items-center space-x-8 text-sm font-medium tracking-wide text-white'>
-          {navLinks.map((link) => (
-            <li key={link.name}>
-              <a
-                href={link.href}
-                className='hover-text-accent-main-main border-b-2 border-transparent hover:border-accent py-1.5 transition-all duration-200'>
-                {link.name}
-              </a>
-            </li>
-          ))}
+        <ul className='flex items-center space-x-8 text-sm font-medium tracking-wide text-heading'>
+          {navLinks.map((link) => {
+            const sectionId = link.href.substring(1);
+            const isActive = activeSection === sectionId;
+
+            return (
+              <li key={link.name}>
+                <a
+                  href={link.href}
+                  className={`border-b-2 py-1.5 transition-all duration-200 ${
+                    isActive
+                      ? "border-accent text-accent"
+                      : "border-transparent hover:border-accent hover:text-accent"
+                  }`}>
+                  {link.name}
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </nav>
 
       {/* Mobile Menu Toggle */}
       <button
         onClick={() => setToggleMenu(!toggleMenu)}
-        className='block md:hidden text-white hover:text-accent-main transition-colors focus:outline-none'
+        className='block text-heading transition-colors duration-300 hover:text-accent focus:outline-none md:hidden'
         aria-label='Toggle navigation menu'>
         {toggleMenu ? (
           <FiX className='h-6 w-6' />
@@ -59,7 +96,7 @@ export default function Header() {
         )}
       </button>
 
-      {/* Mobile Navigation Drawer */}
+      {/* Mobile Navigation */}
       <AnimatePresence>
         {toggleMenu && (
           <motion.nav
@@ -67,19 +104,28 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25 }}
-            className='md:hidden fixed top-[69px] left-0 w-full bg-secondary/95 border-b border-slate-800'>
+            className='fixed left-0 top-[72px] z-50 w-full border-b border-muted bg-primary md:hidden'>
             <ul
               onClick={() => setToggleMenu(false)}
-              className='flex flex-col items-center py-4 text-slate-300 font-medium'>
-              {navLinks.map((link) => (
-                <li key={link.name} className='w-full text-center'>
-                  <a
-                    href={link.href}
-                    className='block py-3 hover:bg-slate-800/50 hover:text-accent-main transition-all duration-200'>
-                    {link.name}
-                  </a>
-                </li>
-              ))}
+              className='flex flex-col items-center py-4 font-medium text-body'>
+              {navLinks.map((link) => {
+                const sectionId = link.href.substring(1);
+                const isActive = activeSection === sectionId;
+
+                return (
+                  <li key={link.name} className='w-full text-center'>
+                    <a
+                      href={link.href}
+                      className={`block border-l-4 py-3 transition-all duration-200 ${
+                        isActive
+                          ? "border-accent bg-surface/50 text-accent"
+                          : "border-transparent hover:bg-surface/50 hover:text-accent"
+                      }`}>
+                      {link.name}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </motion.nav>
         )}

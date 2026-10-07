@@ -7,12 +7,13 @@
 :root {
   /* ---------- Brand ---------- */
 
-  --primary: #002864;
-  --secondary: #a4c9ff;
+  --primary: #032563;
+  --secondary: #73a6cb;
+  --header: #003e39;
   --surface: #12002c;
-  --neutral: #94ffc2;
+  --neutral: #73ffb0;
   --accent: #00fff7;
-  --accent-light: #00ff2f;
+  --accent-light: #40ff00;
   --accent-dark: #001644;
 
   /* ---------- Text ---------- */
@@ -47,6 +48,7 @@
 
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+  --color-header: var(--header);
   --color-surface: var(--surface);
   --color-neutral: var(--neutral);
 
